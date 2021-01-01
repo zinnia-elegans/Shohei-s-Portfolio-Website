@@ -1,0 +1,6 @@
+<!-- main -->
+<section class="main main-inner">
+    <div class="main-content">
+        <h1 class="main-text"><?php the_title(); ?></h1>
+    </div>
+</section>
