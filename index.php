@@ -3,7 +3,7 @@
 <!-- main -->
 <section class="main main-inner">
     <div class="main-content wow fadeIn">
-        <h1 class="main-text">Shohei's Portfolio Website</h1>
+        <h1 class="main-text fede">Shohei's Portfolio Website</h1>
     </div>
 </section>
 

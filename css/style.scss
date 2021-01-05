@@ -55,8 +55,8 @@ $breakpoints: (
 }
 
 body {
-    font-family: 'ヒラギノ角ゴシック','Yu Gothic','メイリオ', 'ＭＳ Ｐゴシック','MS PGothic';
-    line-height: 1.5;
+    font-family: "游明朝体", "Yu Mincho", YuMincho,'ヒラギノ角ゴシック','Yu Gothic','メイリオ', 'ＭＳ Ｐゴシック','MS PGothic';
+    line-height: 1.8;
     width: 100%;
     overflow-x: hidden;
     overflow-wrap: break-word;
@@ -130,13 +130,12 @@ a {
 
 .title-text {
     font-family: 'showtime', Century;
-    font-size: 30px;
+    font-size: 28px;
     position: absolute;
     top: 0;
     left: 5%;
     transform: translate(-50%,-50%);
     background-color: $color-white;
-    padding: 1px 0;
     margin-bottom: 0;
 
     @include mq(md) {

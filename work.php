@@ -48,7 +48,7 @@ Template Name: Work
         ?>
             <div class="work-content">
                 <div class="work-content-image">
-                    <a href="<?php echo get_template_directory_uri() ?>/image/tokyo_protein.png" rel="lightbox">
+                    <div rel="lightbox">
                         <?php
                         if (wp_get_attachment_image_src($field_value['design_image'], 'large')) {
                             echo wp_get_attachment_image($field_value['design_image'], 'large');
@@ -56,10 +56,38 @@ Template Name: Work
                             echo '<img src="' . esc_url(get_template_directory_uri()) . '/image/noimg.png" alt="No Image">';
                         }
                         ?>
-                    </a>
+                    </div>
                 </div>
                 <div class="work-content-text">
                     <p class="work-text"><?php echo esc_html($field_value['design_text']); ?></p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</section>
+
+<!-- EC_site -->
+<section class="work-section">
+    <p class="work-title">EC site</p>
+    <div class="work-wrapper inner">
+        <?php
+        $work_design = SCF::get('ec_site', 18);
+        foreach ($work_design as $field_name => $field_value) {
+        ?>
+            <div class="work-content">
+                <div class="work-content-image">
+                    <a href="<?php echo esc_html($field_value['ec_site_link']); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php
+                        if (wp_get_attachment_image_src($field_value['ec_site_image'], 'large')) {
+                            echo wp_get_attachment_image($field_value['ec_site_image'], 'large');
+                        } else {
+                            echo '<img src="' . esc_url(get_template_directory_uri()) . '/image/noimg.png" alt="No Image">';
+                        }
+                        ?>
+                    </a>
+                </div>
+                <div class="work-content-text">
+                    <p class="work-text"><?php echo esc_html($field_value['ec_site_text']); ?></p>
                 </div>
             </div>
         <?php } ?>
