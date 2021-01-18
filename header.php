@@ -19,8 +19,8 @@
 
 <body>
     <!-- header -->
-    <header class="header inner" id="header">
-        <div class="drawer is-sp">
+    <header class="header header-inner" id="header">
+        <div class="drawer">
             <div class="drawer-icon">
                 <span class="drawer-open"><i class="fas fa-bars"></i></span><!-- /drawer-open -->
                 <span class="drawer-close"><i class="fas fa-times"></i></span><!-- drawer-close -->
@@ -46,19 +46,17 @@
             </div>
         </div>
 
-        <nav class="header-nav is-pc">
-            <ul class="header-menu">
-                <?php
-                wp_nav_menu(
+        <nav class="header-nav">
+            <?php
+            wp_nav_menu(
 
-                    array(
-                        'depth' => 1,
-                        'theme_location' => 'global', //グローバルメニューをここに表示すると指定
-                        'container' => 'false',
-                        'menu_class' => 'header-menu',
-                    )
-                );
-                ?>
-            </ul>
+                array(
+                    'depth' => 1,
+                    'theme_location' => 'global', //グローバルメニューをここに表示すると指定
+                    'container' => 'false',
+                    'menu_class' => 'header-menu',
+                )
+            );
+            ?>
         </nav>
     </header>

@@ -1,5 +1,5 @@
 <footer class="footer inner">
-    <p class="footer-copyright">© 2020 Shohei Shimizu</p>
+    <p class="footer-copyright">© 2021 Shohei Shimizu</p>
 </footer>
 
 <?php wp_footer(); ?>
