@@ -58,11 +58,12 @@ body {
     font-family: "游明朝体", "Yu Mincho", YuMincho,'ヒラギノ角ゴシック','Yu Gothic','メイリオ', 'ＭＳ Ｐゴシック','MS PGothic';
     line-height: 1.8;
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     overflow-wrap: break-word;
     background-color: $color-white !important;
     margin: 0;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
 img {
@@ -118,11 +119,19 @@ a {
 
 .header-inner {
     margin-left: 300px;
+
+    @include mq(xl) {
+        margin-left: 0;
+    }
 }
 
 .title-wrapper {
     margin-top: 200px;
     text-align: center;
+
+    @include mq(lg) {
+        margin-top: 100px;
+    }
 }
 
 .title-text {
@@ -151,6 +160,7 @@ a {
         height: 0;
         border: 1px solid transparent;
         box-sizing: content-box;
+        border-radius: 5px;
     }
 
     &:hover::after {
@@ -165,8 +175,11 @@ a {
     }
 }
 
+button {
+    background-color: transparent;
+}
+
 .more-read-button {
-    background-color: $color-white;
     border: 1px solid $color-white;
     font-family: 'YuMincho',Century;
     font-size: 18px;
@@ -178,6 +191,7 @@ a {
     position: relative;
     text-decoration: none;
     color: $color-subtext;
+    border-radius: 5px;
 
     &::before,
     &::after {
@@ -190,6 +204,7 @@ a {
         height: 0;
         border: 1px solid transparent;
         box-sizing: content-box;
+        border-radius: 5px;
     }
 
     &:hover {
@@ -221,14 +236,67 @@ a {
 
     @include mq(lg) {
         font-size: 20px;
-        width: 100px;
-        height: 30px;
+    }
+}
+
+.price-more-read {
+    @extend.more-read;
+    color: $color-white;
+    width: 440px;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 96%;
+        z-index: 2;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 1px solid transparent;
+        box-sizing: content-box;
+        border-radius: 5px;
     }
 
-    @include mq(md) {
-        font-size: 30px;
-        width: 130px;
-        height: 40px;
+    &:hover::after {
+        border-bottom-color: $color-white;
+        transition: width .3s, height .3s .3s;
+        width: 100px;
+    }
+
+    @include mq(lg) {
+        margin-top: 50px;
+    }
+
+    @include mq(sm) {
+        width: 100%;
+    }
+}
+
+.price-more-read-button {
+    @extend.more-read-button;
+    color: $color-white;
+    border: 1px solid transparent;
+    font-size: 36px;
+    height: 90px;
+
+    &:hover {
+        color: $color-subtext;
+        transition: 1s;
+        background-color: $color-white;
+    }
+
+    &:hover::before {
+        border-top-color: $color-white;
+        border-right-color: $color-white;
+    }
+
+    &:hover::after {
+        border-bottom-color: $color-white;
+        border-left-color: $color-white;
+    }
+
+    @include mq(lg) {
+        font-size: 24px;
     }
 }
 
@@ -251,6 +319,8 @@ button[type=button] {
     top: 0;
     left: 0;
     right: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .header-menu {
@@ -261,137 +331,219 @@ button[type=button] {
 }
 
 .header-link {
-    font-size: 24px;
+    font-size: 20px;
     list-style: none;
+
+    @include mq(xl) {
+        font-size: 16px;
+    }
 }
 
 .contact-link {
-    font-size: 18px;
     list-style: none;
     border: 1px solid $color-text;
-    padding: 5px 25px;
+    padding: 7px 30px;
     margin-right: 100px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $color-text;
+        transition: 1s;
+    }
+
+    @include mq(lg) {
+        margin-right: 50px;
+    }
+
+    @include mq(sm) {
+        display:none;
+    }
 }
 
-// .header-link {
-//     color: $color-text;
-//     font-size: 30px;
-//     text-align: center;
-//     list-style: none;
-//     text-decoration: none;
-//     margin: auto 60px;
-//     display: block;
+.contact-link-button {
+    font-size: 18px;
+    border: none;
+    font-weight: normal !important;
+    font-family: 'Crimson Text';
 
-//     @include mq(xl) {
-//         margin: auto 40px;
-//     }
+    &:hover {
+        color: $color-white !important;
+        transition: 1s;
+    }
 
-//     @include mq(lg) {
-//         margin: auto 30px;
-//     }
-
-//     @include mq(md) {
-//         margin: auto 20px;
-//     }
-
-//     @include mq(sm) {
-//         margin: auto 10px;
-//     }
-
-//     &:hover {
-//         text-decoration: none;
-//         opacity: 0.7;
-//         color: $color-subtext;
-//         transition: 0.6s;
-//     }
-
-//     @include mq(md) {
-//         font-size: 20px;
-//     }
-// }
-
-.drawer-menu-item {
-    color: $color-white;
-    padding: 20px 0 29px 0;
+    @include mq(xl) {
+        font-size: 14px;
+    }
 }
 
-.drawer-icon {
-	color: $color-white;
-	cursor: pointer;
-	font-size: 20px;
-	position: absolute;
-	right: 17px;
-	text-align: center;
-	top: 29px;
-	z-index: 41;
+.customize-support {
+    margin-top: 0 !important;
 }
 
-//通常時は表示
-.drawer-open {
-	display: block;
-}
-
-//クリックするとdrawer-openが消える
-.m_checked .drawer-open {
-	display: none;
-}
-
-//通常時は消えている
-.drawer-close {
-    display: none;
+/*=====================================
+# drawer_menu
+=======================================*/
+#nav-toggle {
     position: fixed;
-    right: 30px;
+    top: 43px;
+    right: 60px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+
+    @include mq(xl) {
+        top: 36px;
+    }
+
+    @include mq(lg) {
+        top: 40px;
+        right: 10px;
+    }
+
+    @include mq(md) {
+        top: 50px;
+    }
+
+    @include mq(sm) {
+        // top: 70px;
+    }
 }
 
-//クリックするとdrawer-closeが表示
-.m_checked .drawer-close {
-	display: block;
+#nav-toggle > div {
+    width: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
-//通常時は消えている
-.drawer-content {
-	height: 100vh;
-	left: 0;
-	opacity: 0;
-	overflow: auto;
-	position: fixed;
-	text-align: left;
-	top: 0;
-	transition: all 0.7s ease 0s;
-	visibility: hidden;
-    z-index: 40;
+#nav-toggle > div > span.toggle {
+    width: 140%;
+    height: 2px;
+    left: 0;
+    display: block;
+    background: $color-text;
+    position: absolute;
+    transition: top .5s ease, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, top .5s ease;
+    transition: transform .3s ease-in-out, top .5s ease, -webkit-transform .3s ease-in-out;
+}
+
+header #nav-toggle > div > span.toggle {
     width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: $color-text;
+    position: absolute;
+    transition: top .5s ease, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, top .5s ease;
+    transition: transform .3s ease-in-out, top .5s ease, -webkit-transform .3s ease-in-out;
 }
 
-//クリックするとdrawer-contentのopacityが1になる
-.m_checked .drawer-content {
-	opacity: 1;
-	visibility: visible;
+#nav-toggle span.toggle:nth-child(1) {
+    top: 0;
 }
-
-.drawer-nav {
-    width: 100%;
-    padding: 100px 16px;
-    background: rgba(51, 51, 51, 4);
-    min-height: 100vh;
+#nav-toggle span.toggle:nth-child(3) {
+    top: 10px;
 }
-
-
-.drawer-nav li a {
-	border-bottom: 1px solid $color-white;
-	border-left: 6px solid transparent;
-	color: $color-white;
-	display: block;
-	font-size: 40px;
-	padding: 30px 12px 5px 0;
-    text-decoration: none;
-    font-family: 'showtime',Century;
+.open #nav-toggle span.toggle {
+    background: #fff;
+}
+.open #nav-toggle span.toggle:nth-child(1) {
+    top: 5px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.open #nav-toggle span.toggle:nth-child(2) {
+    top: 10px;
+    width: 0;
+    left: 50%;
+}
+.open #nav-toggle span.toggle:nth-child(3) {
+    top: 5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/* z-index */
+#nav-toggle {
+    z-index: 1000;
+}
+#container {
+    z-index: 900;
+}
+#global-nav {
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
     text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    opacity: 0;
+    transition: opacity .3s ease, visibility .3s ease;
 }
-
-.drawer-list {
+#global-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0;
+    transition: color .3s ease;
+    font-size: .55em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: .5em;
+}
+#global-nav a:hover {
+    color: #666;
+}
+#global-nav ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+}
+#global-nav ul li {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    transition: opacity .2s ease, -webkit-transform .3s ease;
+    transition: transform .3s ease, opacity .2s ease;
+    transition: transform .3s ease, opacity .2s ease, -webkit-transform .3s ease;
+}
+#global-nav ul li:nth-child(2) {
+    transition-delay: .05s;
+}
+#global-nav ul li:nth-child(3) {
+    transition-delay: .15s;
+}
+#global-nav ul li:nth-child(4) {
+    transition-delay: .25s;
+}
+/* open */
+.open {
+    overflow: hidden;
+}
+.open #global-nav {
+    visibility: visible;
+    opacity: 1;
+}
+.open #global-nav li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: opacity .9s ease, -webkit-transform 1s ease;
+    transition: transform 1s ease, opacity .9s ease;
+    transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
 }
 
 /*===========================
@@ -421,7 +573,7 @@ button[type=button] {
 .main-text {
     font-family: 'showtime',Century;
     text-align: center;
-    font-size: 140px;
+    font-size: 120px;
     position: absolute;
     top: 34%;
     left: 32%;
@@ -431,17 +583,19 @@ button[type=button] {
     font-weight:400;
 
     @include mq(xl) {
-        width: 700px;
+        font-size: 90px;
+        left: 40%;
+        top: 40%;
     }
 
     @include mq(lg) {
-        width: 500px;
+        font-size: 50px;
     }
 
-    @include mq(md) {
-        font-size: 50px;
-        width: 400px;
+    @include mq(sm) {
+        top: 30%;
     }
+
 }
 
 .main-subtext {
@@ -453,7 +607,94 @@ button[type=button] {
     transform:translate(-50%,-50%);
     letter-spacing: 12px;
     font-weight: 100;
+
+    @include mq(xl) {
+        font-size: 16px;
+        left: 40%;
+    }
+
+    @include mq(lg) {
+        font-size: 14px;
+    }
+
+    @include mq(sm) {
+        font-size: 12px;
+    }
 }
+
+.main-text span,
+.main-subtext span {
+    opacity: 0;
+    -webkit-transition: .6s ease-in-out;
+    transition: .6s ease-in-out;
+}
+
+/*===========================
+      concept
+=============================*/
+.concept {
+    position: relative;
+}
+
+.concept-content {
+    width: 50%;
+    margin: 50px auto 0;
+    color: $color-subtext;
+}
+
+/* アニメーション設定 */
+.arrowWrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px
+  }
+  
+  .arrowInner p {
+    font-size: 12px;
+    text-align: end;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  
+  .arrow {
+    width: 1px;
+    height: 90px;
+    margin: 60px auto 0;
+    background-color: #eee;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .arrow::before {
+    content: '';
+    width: 1px;
+    height: 100px;
+    margin: 50px auto 0;
+    background-color: $color-text;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    -webkit-animation: arrow 2.5s ease 0s infinite normal;
+    animation: arrow 2.5s ease 0s infinite normal;
+  }
+  
+  @keyframes arrow {
+    0% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  
+    60% {
+      -webkit-transform: translate3d(-50%, 100px, 0);
+      transform: translate3d(-50%, 100px, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-50%, 100px, 0);
+      transform: translate3d(-50%, 100px, 0);
+    }
+  }
 
 /*===========================
       service
@@ -466,6 +707,10 @@ button[type=button] {
     @include mq(md) {
         display: block;
         padding: 0 50px;
+    }
+
+    @include mq(sm) {
+        padding:0;
     }
 }
 
@@ -482,7 +727,7 @@ button[type=button] {
 
     @include mq(md) {
         & + & {
-            margin: 20px auto;
+            margin: 50px auto;
         }
     }
 }
@@ -505,15 +750,11 @@ button[type=button] {
     font-size: 14px;
     text-align: left;
     margin-top: 20px;
-}
 
-/*===========================
-      concept
-=============================*/
-.concept-content {
-    width: 50%;
-    margin: 50px auto 0;
-    color: $color-subtext;
+    @include mq(md) {
+        width: 80%;
+        margin: 20px auto 0;
+    }
 }
 
 /*===========================
@@ -521,7 +762,8 @@ button[type=button] {
 =============================*/
 .price {
     background-image: url(../image/main-image.jpg);
-    min-height: 140vh;
+    min-height: 1250px;
+    height: auto;
     background-position: center 70%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -531,6 +773,21 @@ button[type=button] {
     .title-wrapper {
         padding: 50px 0;
     }
+
+    @include mq(lg) {
+        padding-bottom: 50px;
+        min-height: 1000px;
+    }
+
+    @include mq(md) {
+        min-height: 900px;
+        padding-bottom: 10px;
+    }
+
+    @include mq(sm) {
+    }
+
+    
 }
 
 .business-wrapper {
@@ -538,9 +795,22 @@ button[type=button] {
     justify-content: space-between;
     padding: 0 80px;
 
+    @include mq(xl) {
+        padding: 0 40px;
+    }
+
     @include mq(lg) {
+        padding: 0 10px;
+    }
+
+    @include mq(md) {
         display: block;
-        padding: 0 50px;
+        padding: 0 80px;
+        
+    }
+
+    @include mq(sm) {
+        padding: 0 20px 50px;
     }
 
 }
@@ -554,20 +824,24 @@ button[type=button] {
     border: 1px solid #e7e6e6;
 
     @include mq(xl) {
-        width: 48%;
+        padding: 50px 20px 180px;
     }
 
     @include mq(lg) {
-        width: 100%;
+        padding: 50px 5px 180px;
     }
 
     @include mq(md) {
-        margin: 0 auto;
+        padding: 50px 40px 180px;
         width: 100%;
 
         & + & {
             margin-top: 20px;
         }
+    }
+
+    @include mq(sm) {
+        padding: 50px 20px 180px;
     }
 }
 
@@ -602,6 +876,18 @@ button[type=button] {
         transform: rotate(-45deg);
     }
 
+    @include mq(lg) {
+        font-size: 10px;
+
+        &::after {
+            left: -2.5em;
+        }
+    }
+
+    @include mq(md) {
+        font-size: 12px;
+    }
+
 }
 
 .business-price {
@@ -612,6 +898,18 @@ button[type=button] {
     transform: translateY(-50%) translateX(-50%);
     margin: auto;
     width: 100%;
+
+    @include mq(xl) {
+        font-size: 16px;
+    }
+
+    @include mq(lg) {
+        font-size: 10px;
+    }
+
+    @include mq(md) {
+        font-size: 16px
+    }
 }
 
 .business-sub-price {
@@ -622,6 +920,18 @@ button[type=button] {
 .business-price-size {
     font-size: 24px;
     font-weight: 400;
+
+    @include mq(xl) {
+        font-size: 18px;
+    }
+
+    @include mq(lg) {
+        font-size: 12px;
+    }
+
+    @include mq(md) {
+        font-size: 20px;
+    }
 }
 
 /*===========================
@@ -689,6 +999,7 @@ button[type=button] {
 
     @include mq(md) {
         width: 48%;
+        margin-top: 50px;
     }
 
     @include mq(sm) {
@@ -798,8 +1109,8 @@ button[type=button] {
     font-size: 30px;
     font-weight: normal;
 
-    @include mq(lg) {
-        font-size: 40px;
+    @include mq(xl) {
+        font-size: 24px;
     }
 
     @include mq(md) {
@@ -811,11 +1122,19 @@ button[type=button] {
     font-size: 24px;
     margin-left: 30px;
     font-weight: normal;
+
+    @include mq(xl) {
+        font-size: 20px;
+    }
 }
 
 .about-text {
     color: $color-subtext;
     margin: 0 auto 20px;
+
+    @include mq(xl) {
+        font-size: 14px;
+    }
 
     @include mq(lg) {
         font-size: 14px;

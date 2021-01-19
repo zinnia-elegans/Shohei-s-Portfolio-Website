@@ -14,9 +14,18 @@
         <p class="title-text">Concept</p>
         <p class="title-subtext">コンセプト</p>
     </div>
-    <div class="concept-content">
+    <div class="arrowWrap">
+        <div class="arrowInner">
+            <p>SCROLL DOWN</p>
+            <div class="arrow"></div>
+        </div>
+    </div>
+    <div class="concept-content wow fadeIn">
         <p class="concept-text">
-            ウェブを中心に活動しているフリーランスのWebクリエイターです。Webサイト制作ではデザインからコーディング、WorPress実装まで承ります。また、自身のオンラインショップが欲しいお客様に関しましては、Shopifyを用いたECサイト構築や運用サポート、またVyondを用いたビジネスアニメーション動画制作のご依頼も承っております。様々なアイデアを提案する中で、お客様の課題解決のため、一緒に考えながら制作を進めていければと思っております。お見積りは無料です。まずはお気軽にご相談ください。
+            <?php
+            $concept = SCF::get('concept', 111);
+            echo $concept;
+            ?>
         </p>
     </div>
 </section>
@@ -59,7 +68,7 @@
         <?php } ?>
     </div>
     <div class="more-read">
-        <button onclick="location.href='https://shoheishimizu.com/service/'" class="more-read-button" type="button">サービス一覧へ</button>
+        <button onclick="location.href='https://shoheishimizu.com/service/'" class="more-read-button" type="button">サービス一覧</button>
     </div>
 </section>
 
@@ -73,47 +82,53 @@
 
         <div class="business-content">
             <p class="business-content-title">ECサイト構築</p>
-            <ul class="business-content-list">
-                <li class="business-content-text">テンプレートを利用したオリジナルのデザインカスタマイズ</li>
-                <li class="business-content-text">商品登録</li>
-                <li class="business-content-text">各種アプリ設定</li>
-                <li class="business-content-text">各種SNS連携</li>
-                <li class="business-content-text">販売チャンネル追加</li>
-            </ul>
+            <?php
+            $ec_site = SCF::get('ec_site', 115);
+            foreach ($ec_site as $field_name => $field_value) {
+            ?>
+                <ul class="business-content-list">
+                    <li class="business-content-text"><?php echo esc_html($field_value['ec_site_text']); ?></li>
+                </ul>
+            <?php } ?>
             <p class="business-price"><span class="business-price-size">30,000</span>円〜</p>
         </div>
 
         <div class="business-content">
             <p class="business-content-title">ビジネスアニメーション</p>
-            <ul class="business-content-list">
-                <li class="business-content-text">商品PR</li>
-                <li class="business-content-text">会社 / 店舗紹介</li>
-                <li class="business-content-text">自己紹介</li>
-                <li class="business-content-text">営業資料</li>
-                <li class="business-content-text">マニュアル / 教育資料</li>
-            </ul>
+            <?php
+            $business_animation = SCF::get('business_animation', 122);
+            foreach ($business_animation as $field_name => $field_value) {
+            ?>
+                <ul class="business-content-list">
+                    <li class="business-content-text"><?php echo esc_html($field_value['business_animation_text']); ?></li>
+                </ul>
+            <?php } ?>
             <p class="business-price">30秒 / <span class="business-price-size">40,000</span>円〜</p>
         </div>
 
         <div class="business-content">
             <p class="business-content-title">Webデザイン</p>
-            <ul class="business-content-list">
-                <li class="business-content-text">トップページ</li>
-                <li class="business-content-text">下層ページ</li>
-                <li class="business-content-text">スマホ版デザイン</li>
-            </ul>
+            <?php
+            $web_design = SCF::get('web_design', 125);
+            foreach ($web_design as $field_name => $field_value) {
+            ?>
+                <ul class="business-content-list">
+                    <li class="business-content-text"><?php echo esc_html($field_value['web_design_text']); ?></li>
+                </ul>
+            <?php } ?>
             <p class="business-price">1ページ / <span class="business-price-size">20,000</span>円〜</p>
         </div>
 
         <div class="business-content">
             <p class="business-content-title">Webサイト</p>
-            <ul class="business-content-list">
-                <li class="business-content-text">各ページのコーディング</li>
-                <li class="business-content-text">更新機能（WordPress）</li>
-                <li class="business-content-text">ドメイン / サーバー契約</li>
-                <li class="business-content-text">お問い合わせフォーム</li>
-                <li class="business-content-text">アナリティクス設置</li>
-            </ul>
+            <?php
+            $web_site = SCF::get('web_site', 128);
+            foreach ($web_site as $field_name => $field_value) {
+            ?>
+                <ul class="business-content-list">
+                    <li class="business-content-text"><?php echo esc_html($field_value['web_site_text']); ?></li>
+                </ul>
+            <?php } ?>
             <p class="business-sub-price">LP / <span class="business-price-size">30,000</span>円〜</p>
             <p class="business-price">HP / <span class="business-price-size">50,000</span>円〜</p>
         </div>
@@ -121,8 +136,8 @@
 
 
     </div>
-    <div class="more-read">
-        <button onclick="location.href='https://shoheishimizu.com/business'" class="more-read-button" type="button">more read</button>
+    <div class="price-more-read">
+        <button onclick="location.href='https://shoheishimizu.com/contact'" class="price-more-read-button" type="button">無料でお見積りをする</button>
     </div>
 
 </section>
@@ -162,7 +177,7 @@
     </div>
 
     <div class="more-read">
-        <button onclick="location.href='https://shoheishimizu.com/work/'" class="more-read-button" type="button">more read</button>
+        <button onclick="location.href='https://shoheishimizu.com/work/'" class="more-read-button" type="button">制作実績一覧</button>
     </div>
 
 </section>
@@ -195,7 +210,7 @@
         <?php } ?>
     </div>
     <div class="more-read">
-        <button onclick="location.href='https://shoheishimizu.com/about/'" class="more-read-button" type="button">more read</button>
+        <button onclick="location.href='https://shoheishimizu.com/about/'" class="more-read-button" type="button">プロフィール詳細</button>
     </div>
 </section>
 

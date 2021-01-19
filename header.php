@@ -18,45 +18,46 @@
 </head>
 
 <body>
+
     <!-- header -->
     <header class="header header-inner" id="header">
-        <div class="drawer">
-            <div class="drawer-icon">
-                <span class="drawer-open"><i class="fas fa-bars"></i></span><!-- /drawer-open -->
-                <span class="drawer-close"><i class="fas fa-times"></i></span><!-- drawer-close -->
+        <nav class="header-nav dc-menu">
+            <div class="header-menu">
+                <h1 class="header-link">Shohei's Portfolio Website</h1>
+                <div class="contact-link">
+                    <button onclick="location.href='https://shoheishimizu.com/contact'" class="contact-link-button" type="button">Contact</button>
+                </div>
             </div>
 
-            <div class="drawer-content">
-                <nav class="drawer-nav">
-                    <ul class="drawer-list">
-                        <?php
-                        wp_nav_menu(
+            <!-- drawer_menu -->
+            <div class="custom-header">
+                <div id="nav-toggle">
+                    <div>
+                        <span class="toggle"></span>
+                        <span class="toggle"></span>
+                        <span class="toggle"></span>
+                    </div>
+                </div>
+                <div id="global-nav">
+                    <nav>
+                        <ul>
+                            <?php
+                            wp_nav_menu(
 
-                            array(
-                                'depth' => 1,
-                                'theme_location' => 'drawer', //グローバルメニューをここに表示すると指定
-                                'container' => 'nav',
-                                'container_class' => 'drawer-menu-item',
-                                'menu_class' => 'drawer-list',
-                            )
-                        );
-                        ?>
-                    </ul>
-                </nav>
+                                array(
+                                    'depth' => 1,
+                                    'theme_location' => 'drawer', //グローバルメニューをここに表示すると指定
+                                    'container' => 'nav',
+                                    'container_class' => 'drawer-menu-item',
+                                    'menu_class' => 'drawer-list',
+                                )
+                            );
+                            ?>
+                        </ul>
+                    </nav>
+                </div>
+
             </div>
-        </div>
-
-        <nav class="header-nav">
-            <?php
-            wp_nav_menu(
-
-                array(
-                    'depth' => 1,
-                    'theme_location' => 'global', //グローバルメニューをここに表示すると指定
-                    'container' => 'false',
-                    'menu_class' => 'header-menu',
-                )
-            );
-            ?>
         </nav>
+
     </header>
