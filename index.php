@@ -137,7 +137,7 @@
 
     </div>
     <div class="price-more-read">
-        <button onclick="location.href='https://shoheishimizu.com/contact'" class="price-more-read-button" type="button">無料でお見積りをする</button>
+        <button onclick="location.href='https://shoheishimizu.com/contact'" class="price-more-read-button" type="button">無料でお見積り</button>
     </div>
 
 </section>

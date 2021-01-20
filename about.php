@@ -6,12 +6,18 @@ Template Name: About
 
 <?php get_header(); ?>
 
-<?php get_template_part('template_parts/main'); ?>
+<!-- main -->
+<section class="sub-main">
+    <img src="<?php echo get_template_directory_uri() ?>/image/about_image.jpg" alt="自己紹介メイン画像" class="sub-main-image">
+</section>
 
 <!-- about-page -->
 <section class="about-page inner">
+    <div class="title-wrapper">
+        <p class="title-text">About</p>
+        <p class="title-subtext">自己紹介</p>
+    </div>
     <div class="about-page-profile">
-        <p class="about-page-profile-name">Shohei Shimizu</p>
         <?php
         $about_profile = SCF::get('about_profile', 39);
         foreach ($about_profile as $field_name => $field_value) {
@@ -21,6 +27,7 @@ Template Name: About
                 echo wp_get_attachment_image($field_value['about_profile_image'], 'large');
                 ?>
             </div>
+            <p class="about-page-profile-name">清水 翔平</p>
             <p class="about-page-profile-text">
                 <?php echo esc_html($field_value['about_profile_text']); ?>
             </p>
@@ -37,11 +44,11 @@ Template Name: About
         <p class="about-skill-text">Coding：<?php echo esc_html($field_value['about_coding']); ?></p>
         <p class="about-skill-text">Design：<?php echo esc_html($field_value['about_design']); ?></p>
         <p class="about-skill-text">Movie：<?php echo esc_html($field_value['about_movie']); ?></p>
+        <p class="about-skill-text">Other：Shopify</p>
     <?php } ?>
 </section>
 
 <section class="about-page-info inner">
-    <p class="about-info-name">清水 翔平</p>
     <p class="about-info-address">お問い合わせ：Shohei.Shimizu.22@gmail.com</p>
     <p class="about-info-work">事業内容：
         <?php
@@ -57,7 +64,6 @@ Template Name: About
     foreach ($about_sns as $field_name => $field_value) {
     ?>
         <p class="about-sns-text">Twitter： <?php echo esc_html($field_value['about_twitter']); ?></p>
-        <p class="about-sns-text">Instagram： <?php echo esc_html($field_value['about_instagram']); ?></p>
         <p class="about-sns-text">Facebook： <?php echo esc_html($field_value['about_facebook']); ?></p>
     <?php } ?>
 </section>

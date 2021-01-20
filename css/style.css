@@ -230,7 +230,6 @@ button {
 }
 
 .price-more-read {
-  color: #fbfbfb;
   width: 440px;
 }
 
@@ -248,7 +247,7 @@ button {
 }
 
 .price-more-read:hover::after {
-  border-bottom-color: #fbfbfb;
+  border-bottom-color: #6C757D;
   transition: width .3s, height .3s .3s;
   width: 100px;
 }
@@ -266,26 +265,26 @@ button {
 }
 
 .price-more-read-button {
-  color: #fbfbfb;
-  border: 1px solid transparent;
+  border: 1px solid #6C757D;
   font-size: 36px;
   height: 90px;
+  color: #6C757D;
 }
 
 .price-more-read-button:hover {
-  color: #6C757D;
+  color: #fbfbfb;
   transition: 1s;
-  background-color: #fbfbfb;
+  background-color: #6C757D;
 }
 
 .price-more-read-button:hover::before {
-  border-top-color: #fbfbfb;
-  border-right-color: #fbfbfb;
+  border-top-color: #6C757D;
+  border-right-color: #6C757D;
 }
 
 .price-more-read-button:hover::after {
-  border-bottom-color: #fbfbfb;
-  border-left-color: #fbfbfb;
+  border-bottom-color: #6C757D;
+  border-left-color: #6C757D;
 }
 
 @media screen and (max-width: 992px) {
@@ -795,14 +794,13 @@ header #nav-toggle > div > span.toggle {
       price
 =============================*/
 .price {
-  background-image: url(../image/main-image.jpg);
+  background-color: #E1DDDD;
   min-height: 1250px;
   height: auto;
   background-position: center 70%;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  color: #fbfbfb;
 }
 
 .price .title-wrapper {
@@ -1393,8 +1391,20 @@ textarea {
 }
 
 /*=====================================
+# 下層ページ共通
+=======================================*/
+.sub-main-image {
+  width: 100%;
+  height: 400px;
+}
+
+/*=====================================
 # about.html
 =======================================*/
+.about-page .title-wrapper {
+  margin-top: 50px;
+}
+
 .about-page-profile {
   display: block;
   margin-top: 200px;
@@ -1402,8 +1412,9 @@ textarea {
 }
 
 .about-page-profile-name {
-  font-family: "showtime",Century;
-  font-size: 60px;
+  font-size: 26px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .about-page-profile-image {
@@ -1419,7 +1430,6 @@ textarea {
   width: 400px;
   margin: 0 auto;
   text-align: left;
-  margin-top: 40px;
   font-size: 14px;
 }
 
