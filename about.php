@@ -6,18 +6,18 @@ Template Name: About
 
 <?php get_header(); ?>
 
-<!-- main -->
-<section class="sub-main">
+<!-- sub-main -->
+<section class="sub-main wow fadeIn">
     <img src="<?php echo get_template_directory_uri() ?>/image/about_image.jpg" alt="自己紹介メイン画像" class="sub-main-image">
 </section>
 
 <!-- about-page -->
 <section class="about-page inner">
-    <div class="title-wrapper">
+    <div class="title-wrapper wow fadeIn">
         <p class="title-text">About</p>
         <p class="title-subtext">自己紹介</p>
     </div>
-    <div class="about-page-profile">
+    <div class="about-page-profile wow fadeIn">
         <?php
         $about_profile = SCF::get('about_profile', 39);
         foreach ($about_profile as $field_name => $field_value) {
@@ -35,7 +35,7 @@ Template Name: About
     </div>
 </section>
 
-<section class="about-skill inner">
+<section class="about-skill inner wow fadeIn">
     <p class="about-skill-title">所有スキル</p>
     <?php
     $about_skill = SCF::get('about_skill', 39);
@@ -48,7 +48,7 @@ Template Name: About
     <?php } ?>
 </section>
 
-<section class="about-page-info inner">
+<section class="about-page-info inner wow fadeIn">
     <p class="about-info-address">お問い合わせ：Shohei.Shimizu.22@gmail.com</p>
     <p class="about-info-work">事業内容：
         <?php
@@ -58,7 +58,7 @@ Template Name: About
     </p>
 </section>
 
-<section class="about-page-sns inner">
+<section class="about-page-sns inner wow fadeIn">
     <?php
     $about_sns = SCF::get('about_sns', 39);
     foreach ($about_sns as $field_name => $field_value) {

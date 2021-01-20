@@ -1354,46 +1354,74 @@ textarea {
 # service.html
 =======================================*/
 .service-page {
-    margin-top: 100px;
+    padding: 50px 0 200px;
 }
 
-.business-animation {
-    margin-top: 100px;
-    width: 100%;
-
-    @include mq(md) {
-        padding: 0 50px;
-    }
+.service-page-wrapper {
+    margin-top: 150px;
 }
 
-.business-animation-text {
-    width: 70%;
-    margin: 0 auto;
-    color: $color-subtext;
-
-    @include mq(md) {
-        width: 100%;
-    }
-}
-
-.business-animation-content {
-    border: 1px solid $color-subtext;
-    padding: 30px 50px;
-    width: 100%;
-    margin: 80px auto 0;
+.service-page-title {
+    font-size: 18px;
     text-align: center;
+    position: relative;
+    padding: 1rem;
+
+    &:before {
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 30px);
+        width: 60px;
+        height: 2px;
+        content: '';
+        border-radius: 3px;
+        background: rgb(240, 72, 72);
+      }
 }
 
-.business-animation-img {
-    width: 60px;
-    height: auto;
-    margin: 0 auto;
+.service-page-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 40px auto 0;
 }
 
-.business-animation-content-text {
-    margin-top: 50px;
+.service-page-image {
+    width: 40%;
+    object-fit: cover;
+    margin: 20px;
+    height: 180px;
+}
+
+.service-page-text {
+    font-size: 14px;
     color: $color-subtext;
-    text-align: left;
+    margin: 20px;
+    width: 60%;
+}
+
+.service-page-video {
+    width: 40%;
+    height: 0;
+    position: relative;
+    padding-top: 22%;
+    padding-left: 13%;
+    padding-right: 13%;
+    overflow: hidden;
+    margin: 20px;
+
+    @include mq(lg) {
+        padding-top: 20px;
+        height: 200px;
+    }
+}
+
+.service-page-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /*=====================================
