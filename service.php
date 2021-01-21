@@ -8,18 +8,23 @@ Template Name: Service
 
 <!-- sub-main -->
 <section class="sub-main wow fadeIn">
-    <img src="<?php echo get_template_directory_uri() ?>/image/service_image.jpg" alt="自己紹介メイン画像" class="sub-main-image">
+    <img src="<?php echo get_template_directory_uri() ?>/image/service_image.jpg" alt="サービスメイン画像" class="sub-main-image">
 </section>
 
+<div class="breadcrumbs inner" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if (function_exists('bcn_display')) {
+        bcn_display();
+    } ?>
+</div>
 
 <!-- Service -->
 <section class="service-page inner">
-    <div class="title-wrapper">
+    <div class="title-wrapper wow fadeIn">
         <p class="title-text">Service</p>
         <p class="title-subtext">サービス</p>
     </div>
 
-    <div class="service-page-wrapper">
+    <div class="service-page-wrapper wow fadeIn">
         <p class="service-page-title">ECサイト構築</p>
         <div class="service-page-content">
             <img src="<?php echo get_template_directory_uri() ?>/image/ec_site.jpg" alt="ECサイト実績画像" class="service-page-image">
@@ -33,7 +38,7 @@ Template Name: Service
         </div>
     </div>
 
-    <div class="service-page-wrapper">
+    <div class="service-page-wrapper wow fadeIn">
         <p class="service-page-title">Webサイト制作</p>
         <div class="service-page-content">
             <img src="<?php echo get_template_directory_uri() ?>/image/casse-tete.jpg" alt="Webサイト実績画像" class="service-page-image">
@@ -47,7 +52,7 @@ Template Name: Service
         </div>
     </div>
 
-    <div class="service-page-wrapper">
+    <div class="service-page-wrapper wow fadeIn">
         <p class="service-page-title">ビジネスアニメーション動画</p>
         <div class="service-page-content">
             <div class="service-page-video">
