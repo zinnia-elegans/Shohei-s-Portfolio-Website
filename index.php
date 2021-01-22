@@ -214,6 +214,11 @@
     </div>
 </section>
 
-<?php get_template_part('template_parts/contact'); ?>
+<section class="top-contact inner">
+    <p class="top-contact-text">Webからのお問い合わせ</p>
+    <div class="contact-more-read">
+        <button onclick="location.href='https://shoheishimizu.com/contact'" class="contact-more-read-button" type="button"><i class="fas fa-envelope"></i> お問い合わせフォームへ</button>
+    </div>
+</section>
 
 <?php get_footer(); ?>

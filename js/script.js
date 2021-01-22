@@ -97,6 +97,17 @@ $(function () {
     }
 });
 
+// JavaScript for label effects only
+$(window).load(function () {
+    $(".wpcf7-form-control-wrap").val("");
 
+    $(".wpcf7-form-control").focusout(function () {
+        if ($(this).val() != "") {
+            $(this).addClass("has-content");
+        } else {
+            $(this).removeClass("has-content");
+        }
+    })
+});
 
 

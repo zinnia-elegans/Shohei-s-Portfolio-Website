@@ -8,6 +8,7 @@
 $color-text:#2d2d2d;
 $color-subtext:#6C757D;
 $color-white:#fbfbfb;
+$color-blue:#03A1E9;
 
 /*=====================================
     mixin
@@ -144,6 +145,20 @@ a {
     font-size: 20px;
 }
 
+/*=====================================
+# ボタン関係
+=======================================*/
+button {
+    background-color: transparent;
+}
+
+button[type=button] {
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
 .more-read {
     text-align: center;
     position: relative;
@@ -173,10 +188,6 @@ a {
         text-align: center;
         margin: 30px auto 50px;
     }
-}
-
-button {
-    background-color: transparent;
 }
 
 .more-read-button {
@@ -240,27 +251,18 @@ button {
 }
 
 .price-more-read {
-    @extend.more-read;
     width: 440px;
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+    border-radius: 15px;
+    text-align: center;
+    margin:100px auto 0;
 
-    &::after {
-        position: absolute;
-        top: 50%;
-        left: 96%;
-        z-index: 2;
-        content: '';
-        width: 0;
-        height: 0;
-        border: 1px solid transparent;
-        box-sizing: content-box;
-        border-radius: 5px;
+    &:hover {
+        opacity: 0.7;
+        transition: 1s;
     }
 
-    &:hover::after {
-        border-bottom-color: $color-subtext;
-        transition: width .3s, height .3s .3s;
-        width: 100px;
-    }
 
     @include mq(lg) {
         margin-top: 50px;
@@ -272,40 +274,67 @@ button {
 }
 
 .price-more-read-button {
-    @extend.more-read-button;
-    border: 1px solid $color-subtext;
+    border: 1px solid $color-blue;
     font-size: 36px;
     height: 90px;
-    color: $color-subtext;
+    color: $color-white;
+    border-radius: 15px;
+    font-family: 'YuMincho',Century;
+    width: 100%;
+    transition: all .2s;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    padding-right: 30px;
 
-    &:hover {
-        color: $color-white;
-        transition: 1s;
-        background-color: $color-subtext;
-    }
+    &::before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        border: 0px;
+        border-top: solid 3px $color-white;
+        border-right: solid 3px $color-white;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        margin-top: -5px;
 
-    &:hover::before {
-        border-top-color: $color-subtext;
-        border-right-color: $color-subtext;
-    }
-
-    &:hover::after {
-        border-bottom-color: $color-subtext;
-        border-left-color: $color-subtext;
-    }
+      }
 
     @include mq(lg) {
         font-size: 24px;
     }
 }
 
-button[type=button] {
-    &:focus {
-        outline: none;
-        border: none;
+.contact-more-read {
+    width: 70%;
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+    border-radius: 3px;
+    text-align: center;
+    margin:0 auto;
+
+    &:hover {
+        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+        transform: translateY(-4px);
+        transition: 0.7s;
     }
+}
 
-
+.contact-more-read-button {
+    font-size: 36px;
+    height: 90px;
+    color: $color-white;
+    font-family: 'YuMincho',Century;
+    width: 100%;
+    transition: all .2s;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    border: none;
 }
 
 
@@ -340,14 +369,16 @@ button[type=button] {
 
 .contact-link {
     list-style: none;
-    border: 1px solid $color-text;
-    padding: 7px 30px;
+    padding: 8px 40px;
     margin-right: 100px;
-    border-radius: 5px;
+    border-radius: 20px;
+    background-color: $color-blue;
+    border:1px solid $color-blue;
+    
 
     &:hover {
-        background-color: $color-text;
         transition: 1s;
+        opacity: 0.7;
     }
 
     @include mq(lg) {
@@ -364,11 +395,26 @@ button[type=button] {
     border: none;
     font-weight: normal !important;
     font-family: 'Crimson Text';
+    color: $color-white;
+    position: relative;
+    margin-right: 3px;
 
-    &:hover {
-        color: $color-white !important;
-        transition: 1s;
-    }
+    &::before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: 0px;
+        border-top: solid 2px $color-white;
+        border-right: solid 2px $color-white;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 110%;
+        margin-top: -2.5px;
+
+      }
 
     @include mq(xl) {
         font-size: 14px;
@@ -1138,129 +1184,50 @@ header #nav-toggle > div > span.toggle {
         margin-top: 20px;
     }
 }
-
 /*===========================
-      contact
+      top-contact
 =============================*/
-.contact {
-    width: 100%;
+.top-contact {
+    background-color: #ffffff;
+    margin: 200px auto;
+    padding: 100px 0;
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
 
-    @include mq(md) {
-        padding: 0 50px;
-    }
 }
 
-.contact-form {
-    width: 100%;
-    margin-top: 80px;
-}
-
-.contact-list {
-    display: flex;
-    justify-content: space-between;
-
-    @include mq(md) {
-        display: block;
-    }
-}
-
-.contact-content-left {
-    display: block;
-    width: 38%;
-    height: auto;
-
-    @include mq(md) {
-        width: 100%;
-    }
-}
-
-.contact-content-right {
-    width: 58%;
-    height: auto;
-
-    textarea {
-        width: 100%;
-        height: 280px;
-    }
-
-    dd {
-        margin-left: 0;
-    }
-
-    @include mq(md) {
-        width: 100%;
-        margin-top: 26px;
-    }
-}
-
-.contact-item {
-    width: 100%;
-    display: block;
-
-    dd {
-        margin-left: 0;
-    }
-}
-
-.contact-name {
-    margin: 5px;
-    font-weight: 400;
-}
-
-.contact-item-must {
-    margin-left: 8px;
-}
-
-.contact-item-input {
-    width: 100%;
-}
-
-.contact-button {
-    text-align: right;
-
-    @include mq(md) {
-        text-align: center;
-    }
-}
-
-div.wpcf7 .ajax-loader {
-    display: none !important;
-}
-
-.contact-button-submit {
-    background-color: $color-text;
-    color: $color-white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: right;
-    border: 1px solid $color-text;
-}
-
-.contact-message {
+.top-contact-text {
     text-align: center;
-    margin-top: 60px;
-    display: none;
+    color: $color-blue;
+    font-size: 24px;
+    position: relative;
 
-    &.-error {
-        color: #f00;
-    }
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 44px;
+        height: 2px;
+        background-color: $color-blue;
+      }
+
+      &:before {
+        left:30%;
+        -webkit-transform: rotate(-0deg);
+        transform: rotate(60deg);
+      }
+
+      &:after {
+        right: 30%;
+        -webkit-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+      }
 }
 
-input[type=email],
-input[type=text],
-input[type=tel] {
-    height: 30px;
-    margin-bottom: 10px !important;
-    margin-top: 0;
-}
-
-input[type=email],
-input[type=text],
-input[type=tel],
-textarea {
-    background-color: $color-white;
-    border: 1px solid $color-subtext;
-    border-radius: 4px;
+.fa-envelope {
+    margin: auto 20px;
+    transform: rotate( 30deg);  
 }
 
 /*===========================
@@ -2062,4 +2029,178 @@ textarea {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/*=====================================
+# contact.php
+=======================================*/
+.contact {
+    width: 100%;
+
+    @include mq(md) {
+        padding: 0 50px;
+    }
+}
+
+.contact-form {
+    width: 100%;
+    margin: 80px auto 0;
+}
+
+/*=====================================
+# contact form 7
+=======================================*/
+
+/*Contact Form 7カスタマイズ*/
+.inquiry {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/*見出し欄*/
+.inquiry th{
+    text-align:left;
+    font-size:16px;
+    color:$color-text;
+    padding:20px 5px 0px 5px;
+    width:30%;
+    border-bottom:solid 1px #d7d7d7;
+    font-weight: normal;
+}
+
+/*通常欄*/
+.inquiry td{
+    font-size:13px;
+    border-bottom:solid 1px #d7d7d7;
+}
+
+/*横の行とテーブル全体*/
+.entry-content.inquiry tr,
+.entry-content table{
+    border-bottom:solid 1px #d7d7d7;	
+}
+
+/*必須の調整*/
+.must{
+    font-size:7px;
+    padding:5px;
+    background:#ff9393;
+    color:$color-white;
+    border-radius:2px;
+    position:relative;
+    bottom:1px;
+    text-align: center !important;
+    margin-right: 15px;
+}
+
+/*任意の調整*/
+.any{
+    @extend.must;
+    background:#93c9ff;
+}
+
+/*送信ボタンのデザイン変更*/
+#form_btn{
+    display: block;
+    padding:1em 0;
+    margin:30px auto 0;
+    width:80%;
+    background:$color-blue;
+    color:$color-white;
+    font-size:18px;
+    font-weight:bold;	 
+    border-radius:2px;
+    border: 1px solid $color-blue;
+
+    &:hover {
+        background:$color-white;
+        color:$color-blue;
+        transition: 0.5s;
+    }
+}
+
+.wpcf7-form-control {
+    width: 100%;
+}
+
+.wpcf7-form-control-wrap {
+    position: relative;
+}
+
+.spam {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+    /*スマホContact Form 7カスタマイズ*/
+@media(max-width:500px){
+    .inquiry th,.inquiry td {
+     display:block!important;
+     width:100%!important;
+     border-top:none!important;
+     -webkit-box-sizing:border-box!important;
+     -moz-box-sizing:border-box!important;
+     box-sizing:border-box!important;
+    }
+    .inquiry tr:first-child th{
+     border-top:1px solid #d7d7d7!important;
+    }
+    /* 必須・任意のサイズ調整 */	
+    .inquiry .must,.inquiry .any {	
+    font-size:10px;
+    }
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select {
+    height: 40px;
+    border: none;
+    background-color: #f8f5f5;
+    padding: 5px 10px;
+
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+        color: transparent;
+    }
+
+    &:focus::-ms-input-placeholder {
+        color: transparent;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+textarea {
+    border: none;
+    background-color: #f8f5f5;
+    padding: 5px 10px;
+
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+        color: transparent;
+    }
+
+    &:focus::-ms-input-placeholder {
+        color: transparent;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+:focus {
+    outline: none;
 }
