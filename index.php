@@ -215,9 +215,18 @@
 </section>
 
 <section class="top-contact inner">
-    <p class="top-contact-text">Webからのお問い合わせ</p>
+    <p class="top-contact-text">Webからのお問い合わせはこちらから</p>
     <div class="contact-more-read">
         <button onclick="location.href='https://shoheishimizu.com/contact'" class="contact-more-read-button" type="button"><i class="fas fa-envelope"></i> お問い合わせフォームへ</button>
+    </div>
+</section>
+
+<section class="to_top to_top_fixed">
+    <div class="arrowWrapTop">
+        <a href="#" class="arrowInnerTop" id="to_top">
+            <div class="arrow_top"></div>
+            <p>TO TOP</p>
+        </a>
     </div>
 </section>
 

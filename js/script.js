@@ -97,17 +97,30 @@ $(function () {
     }
 });
 
-// JavaScript for label effects only
-$(window).load(function () {
-    $(".wpcf7-form-control-wrap").val("");
 
-    $(".wpcf7-form-control").focusout(function () {
-        if ($(this).val() != "") {
-            $(this).addClass("has-content");
-        } else {
-            $(this).removeClass("has-content");
-        }
-    })
+jQuery(window).on("scroll", function ($) {
+    if (jQuery(this).scrollTop() > 100) {
+        jQuery('.arrowWrapTop').show();
+    } else {
+        jQuery('.arrowWrapTop').hide();
+    }
 });
 
+jQuery('.arrowWrapTop').click(function () {
+    jQuery('body,html').animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+});
 
+// スクロール検知
+jQuery(window).on("scroll", function () {
+    // トップから100px以上スクロールしたら
+    if (100 < jQuery(this).scrollTop()) {
+        // is-showクラスをつける
+        jQuery('.arrowInnerTop').addClass('is-show');
+    } else {
+        // 100pxを下回ったらis-showクラスを削除
+        jQuery('.arrowInnerTop').removeClass('is-show');
+    }
+});

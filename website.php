@@ -294,4 +294,13 @@ Template Name: Web site
 
     </section>
 
+    <section class="to_top to_top_fixed">
+        <div class="arrowWrapTop">
+            <a href="#" class="arrowInnerTop" id="to_top">
+                <div class="arrow_top"></div>
+                <p>TO TOP</p>
+            </a>
+        </div>
+    </section>
+
     <?php get_footer(); ?>

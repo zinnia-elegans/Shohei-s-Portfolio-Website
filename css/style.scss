@@ -710,6 +710,66 @@ header #nav-toggle > div > span.toggle {
     }
   }
 
+  /* アニメーション設定 */
+//   トップへ戻る
+.to_top {
+    position: relative;
+}
+
+.arrowWrapTop {
+    position: absolute;
+    right: 10px;
+    bottom: 100px;
+    height: 200px
+  }
+  
+  .arrowInnerTop p {
+    font-size: 12px;
+    text-align: end;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-top: 35px;
+  }
+  
+  .arrow_top {
+    width: 1px;
+    height: 90px;
+    margin: 60px auto 0;
+    background-color: #eee;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .arrow_top::before {
+    content: '';
+    width: 1px;
+    height: 100px;
+    margin: 50px auto 0;
+    background-color: $color-text;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    -webkit-animation: arrow_top 2.5s ease 0s infinite normal;
+    animation: arrow_top 2.5s ease 0s infinite normal;
+  }
+  
+  @keyframes arrow_top {
+    0% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  
+    60% {
+      -webkit-transform: translate3d(-50%, 100px, 0);
+      transform: translate3d(-50%, 100px, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-50%, 100px, 0);
+      transform: translate3d(-50%, 100px, 0);
+    }
+  }
+
 /*===========================
       service
 =============================*/
@@ -856,9 +916,21 @@ header #nav-toggle > div > span.toggle {
 }
 
 .business-content-title {
-    margin-top: 10px;
+    padding: 15px 0;
     color: $color-subtext;
     text-align: center;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 30px);
+        width: 50px;
+        height: 2px;
+        content: '';
+        border-radius: 3px;
+        background: $color-blue;
+      }
 }
 
 .business-content-list {
@@ -881,8 +953,8 @@ header #nav-toggle > div > span.toggle {
         left: -2em;
         width: 10px;
         height: 5px;
-        border-left: 2px solid #25AF01;
-        border-bottom: 2px solid #25AF01;
+        border-left: 2px solid $color-blue;
+        border-bottom: 2px solid $color-blue;
         transform: rotate(-45deg);
     }
 
@@ -1171,28 +1243,29 @@ header #nav-toggle > div > span.toggle {
     font-size: 24px;
     position: relative;
 
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        display: inline-block;
-        width: 44px;
-        height: 2px;
-        background-color: $color-blue;
-      }
+    // 吹き出し
+    //   &:before,
+    //   &:after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 50%;
+    //     display: inline-block;
+    //     width: 44px;
+    //     height: 2px;
+    //     background-color: $color-blue;
+    //   }
 
-      &:before {
-        left:30%;
-        -webkit-transform: rotate(-0deg);
-        transform: rotate(60deg);
-      }
+    //   &:before {
+    //     left:30%;
+    //     -webkit-transform: rotate(-0deg);
+    //     transform: rotate(60deg);
+    //   }
 
-      &:after {
-        right: 30%;
-        -webkit-transform: rotate(-60deg);
-        transform: rotate(-60deg);
-      }
+    //   &:after {
+    //     right: 30%;
+    //     -webkit-transform: rotate(-60deg);
+    //     transform: rotate(-60deg);
+    //   }
 }
 
 .fa-envelope {
@@ -1355,7 +1428,7 @@ header #nav-toggle > div > span.toggle {
         height: 2px;
         content: '';
         border-radius: 3px;
-        background: rgb(240, 72, 72);
+        background: $color-blue;
       }
 }
 
