@@ -58,6 +58,7 @@ function my_menu_init()
         array(
             'global' => 'ヘッダーメニュー',
             'drawer' => 'ドロワーメニュー',
+            'footer-menu' => 'フッターメニュー',
         )
     );
 }

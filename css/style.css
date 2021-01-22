@@ -154,21 +154,21 @@ button[type=button]:focus {
 
 .more-read::after {
   position: absolute;
-  top: 50%;
-  left: 90%;
-  z-index: 2;
+  bottom: -4px;
+  left: 0;
   content: '';
-  width: 0;
-  height: 0;
-  border: 1px solid transparent;
-  box-sizing: content-box;
-  border-radius: 5px;
+  width: 100%;
+  margin: 0 auto;
+  height: 2px;
+  background: #03A1E9;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
 }
 
 .more-read:hover::after {
-  border-bottom-color: #2d2d2d;
-  transition: width .3s, height .3s .3s;
-  width: 50px;
+  transform-origin: left top;
+  transform: scale(1, 1);
 }
 
 @media screen and (max-width: 768px) {
@@ -193,38 +193,9 @@ button[type=button]:focus {
   border-radius: 5px;
 }
 
-.more-read-button::before, .more-read-button::after {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  z-index: 2;
-  content: '';
-  width: 0;
-  height: 0;
-  border: 1px solid transparent;
-  box-sizing: content-box;
-  border-radius: 5px;
-}
-
 .more-read-button:hover {
-  color: #2d2d2d;
-}
-
-.more-read-button:hover::before, .more-read-button:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.more-read-button:hover::before {
-  border-top-color: #2d2d2d;
-  border-right-color: #2d2d2d;
-  transition: width .3s, height .3s .3s;
-}
-
-.more-read-button:hover::after {
-  border-bottom-color: #2d2d2d;
-  border-left-color: #2d2d2d;
-  transition: height .3s, width .3s .3s;
+  color: #03A1E9;
+  transition: 0.7s;
 }
 
 .more-read-button:focus::after, .more-read-button:focus::before {
@@ -839,7 +810,6 @@ header #nav-toggle > div > span.toggle {
       price
 =============================*/
 .price {
-  background-color: #E1DDDD;
   min-height: 1250px;
   height: auto;
   background-position: center 70%;
@@ -904,6 +874,7 @@ header #nav-toggle > div > span.toggle {
   background-color: #fbfbfb;
   position: relative;
   border: 1px solid #e7e6e6;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 1200px) {
@@ -1338,11 +1309,50 @@ header #nav-toggle > div > span.toggle {
 =============================*/
 .footer {
   margin-top: 150px;
+  background-color: #2d2d2d;
+  color: #fbfbfb;
+  padding: 50px 0;
+}
+
+#menu-footer-menu {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#menu-footer-menu li {
+  display: inline;
+  list-style: outside none none;
+  color: #fbfbfb;
+}
+
+#menu-footer-menu li a {
+  color: #fbfbfb;
+}
+
+#menu-footer-menu li a:hover {
+  opacity: 0.7;
+  transition: 0.7s;
+}
+
+#menu-footer-menu li::before {
+  content: "|";
+  padding: 0 0.6em;
+}
+
+#menu-footer-menu li:first-child::before {
+  content: "";
+  padding: 0;
+}
+
+#menu-footer-menu .sub-menu {
+  display: none;
 }
 
 .footer-copyright {
   text-align: center;
   font-size: 14px;
+  margin: 0;
+  padding-top: 30px;
 }
 
 /*=====================================
