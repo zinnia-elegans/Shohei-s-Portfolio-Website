@@ -122,14 +122,14 @@ Template Name: animation
             <tr>
                 <th>基本料金</th>
                 <td data-label="内容" class="txt">
-                    <span>Vyondには「著作権譲渡手数料」というものがかかります。基本料金でいただくお金は、そちらの支払いに使わせていただきます。</span>
+                    <span>Vyondには「著作権譲渡手数料」というものがかかります。基本料金は、そちらの支払いに使わせていただきます。</span>
                 </td>
-                <td data-label="価格" class="web-site-price"><span class="web-site-price-all">¥20,000</span></td>
+                <td data-label="価格" class="web-site-price"><span class="web-site-price-all">¥15,000</span></td>
             </tr>
             <tr>
                 <th>1秒毎</th>
                 <td data-label="内容" class="txt">
-                    動画の長さによって金額が変わります。お見積り時と実際にアニメーションが完成された時、秒数の誤差がでることがあります。予めご了承ください。
+                    動画の長さによって金額が変わります。お見積り時と実際にアニメーションが完成された際、秒数の誤差がでることがあります。予めご了承ください。
                 </td>
                 <td data-label="価格" class="web-site-price">+ <span class="web-site-price-all">¥1,000</span></td>
             </tr>

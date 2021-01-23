@@ -55,7 +55,7 @@ Template Name: EC site
                 <p class="ec-flow-subtitle">構築</p>
             </div>
             <div class="ec-flow-content-bottom">
-                <p class="ec-flow-text">お客様の要望を元に、ストアテーマのデザイン、商品の登録、規約や配送の設定、テスト決済を行います。これらの工程が完了しましたら、お客様が作成したShopifyアカウントの方へ移行手続きを行います。</p>
+                <p class="ec-flow-text">お客様のご要望を元にストアテーマのデザイン、商品の登録、規約や配送の設定、テスト決済を行います。これらの工程が完了しましたら、お客様が作成したShopifyアカウントへ、サイトの移行手続きを行います。</p>
             </div>
         </div>
     </div>
@@ -134,7 +134,7 @@ Template Name: EC site
                         <p class="ec-price-content-text">規約、プライバシーポリシー設定</p>
                         <p class="ec-price-content-text">配送設定</p>
                         <p class="ec-price-content-text">各種SNS連携</p>
-                        <p class="ec-price-content-text">SNS販売チャンネル開設</p>
+                        <p class="ec-price-content-text">販売チャンネル開設</p>
                         <p class="ec-price-content-text">独自ドメイン取得</p>
                         <p class="ec-price-content-text">二週間の質問サポート</p>
                         <p class="ec-price-content-explain">ベーシップランに加え、デザインのカスタマイズも承ります。また、instagramやfacebookへの販売チャンネル開設、SNS連携等のお手伝いをいたします。</p>
@@ -152,11 +152,11 @@ Template Name: EC site
                         <p class="ec-price-content-text">規約、プライバシーポリシー設定</p>
                         <p class="ec-price-content-text">配送設定</p>
                         <p class="ec-price-content-text">各種SNS連携</p>
-                        <p class="ec-price-content-text">SNS販売チャンネル開設</p>
+                        <p class="ec-price-content-text">販売チャンネル開設</p>
                         <p class="ec-price-content-text">独自ドメイン取得</p>
                         <p class="ec-price-content-text">SNS運用サポート</p>
                         <p class="ec-price-content-text">三週間の質問サポート</p>
-                        <p class="ec-price-content-explain">アドバンスプランに加え、SNSや広告を用いた集客のサポートをいたします。お客様の売上げアップに貢献いたします。</p>
+                        <p class="ec-price-content-explain">アドバンスプランに加え、SNSや広告を用いた集客のサポートをいたします。お客様の売上げアップの為、出来るかぎりのサポートをさせていただきます。</p>
                         <div class="ec-price-all">
                             <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">100,000</span>円</p>
                         </div>
@@ -167,8 +167,10 @@ Template Name: EC site
         </div>
     </div>
 
+    <!-- プラン説明 -->
     <div class="plan-detail">
         <p class="plan-detail-text">※ いずれもShopifyのプラン（月額$29~299）に加入していただく必要があります。</p>
+        <p class="plan-detail-text">※ ドメイン取得にかかる月額料金のお支払いはお客様のご負担となります。</p>
     </div>
 
     <!-- EC_site -->

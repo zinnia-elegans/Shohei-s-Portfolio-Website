@@ -34,7 +34,7 @@ Template Name: Service
             </p>
         </div>
         <div class="more-read">
-            <button onclick="location.href='https://shoheishimizu.com/service/'" class="more-read-button" type="button">詳細ページへ</button>
+            <button onclick="location.href='https://shoheishimizu.com/service/ec-site'" class="more-read-button" type="button">詳細ページへ</button>
         </div>
     </div>
 
@@ -43,12 +43,11 @@ Template Name: Service
         <div class="service-page-content">
             <img src="<?php echo get_template_directory_uri() ?>/image/casse-tete.jpg" alt="Webサイト実績画像" class="service-page-image">
             <p class="service-page-text">
-                Shopifyを用いて、お客様だけのオンラインショップを構築いたします。既存のテンプレートを使用し、お好みのサイトデザインをカスタマイズいたします。プランは３つご用意しておりますので、ご予算にあったプランをお選びください。
-                Shopifyを使用する理由としましては、強力なSNS連携があります。instagramやfacebookの販売チャンネル開設、またLINEなどを利用した集客サポートもいたします。
+                お客様のWebサイトを作成いたします。デザイン、コーディング、更新機能（WordPress）実装まで承ります。記載する文章や画像は予めご用意ください。サーバー、ドメイン契約の代行も承ります。お客様のWebサイトが実際にインターネット上にアップされるまで、責任をもって対応させていただきます。
             </p>
         </div>
         <div class="more-read">
-            <button onclick="location.href='https://shoheishimizu.com/service/'" class="more-read-button" type="button">詳細ページへ</button>
+            <button onclick="location.href='https://shoheishimizu.com/service/web-site'" class="more-read-button" type="button">詳細ページへ</button>
         </div>
     </div>
 
@@ -63,12 +62,11 @@ Template Name: Service
                 ?>
             </div>
             <p class="service-page-text">
-                Shopifyを用いて、お客様だけのオンラインショップを構築いたします。既存のテンプレートを使用し、お好みのサイトデザインをカスタマイズいたします。プランは３つご用意しておりますので、ご予算にあったプランをお選びください。
-                Shopifyを使用する理由としましては、強力なSNS連携があります。instagramやfacebookの販売チャンネル開設、またLINEなどを利用した集客サポートもいたします。
+                ビジネス全般にしようできるアニメーションを作成いたします。商品PR、会社 / 店舗紹介、自己紹介、営業資料、マニュアル / 教育資料など、使用用途は多種多様です。アニメーションを使用することで、複雑な情報もよりわかりやすく相手に伝えることができます。お問い合わせ率の上昇や売上アップなど、使用するうえで多くのメリットがあります。
             </p>
         </div>
         <div class="more-read">
-            <button onclick="location.href='https://shoheishimizu.com/service/'" class="more-read-button" type="button">詳細ページへ</button>
+            <button onclick="location.href='https://shoheishimizu.com/service/business-animation/'" class="more-read-button" type="button">詳細ページへ</button>
         </div>
     </div>
 

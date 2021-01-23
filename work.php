@@ -6,7 +6,10 @@ Template Name: Work
 
 <?php get_header(); ?>
 
-<?php get_template_part('template_parts/main'); ?>
+<!-- sub-main -->
+<section class="sub-main wow fadeIn">
+    <img src="<?php echo get_template_directory_uri() ?>/image/work_image.jpg" alt="実績メイン画像" class="sub-main-image">
+</section>
 
 <!-- web sites -->
 <section class="work-section inner">
@@ -48,7 +51,7 @@ Template Name: Work
         ?>
             <div class="work-content">
                 <div class="work-content-image">
-                    <div rel="lightbox">
+                    <a href="<?php echo esc_url(wp_get_attachment_url($field_value['design_popup'])); ?>" data-lightbox="design">
                         <?php
                         if (wp_get_attachment_image_src($field_value['design_image'], 'large')) {
                             echo wp_get_attachment_image($field_value['design_image'], 'large');
@@ -56,7 +59,7 @@ Template Name: Work
                             echo '<img src="' . esc_url(get_template_directory_uri()) . '/image/noimg.png" alt="No Image">';
                         }
                         ?>
-                    </div>
+                    </a>
                 </div>
                 <div class="work-content-text">
                     <p class="work-text"><?php echo esc_html($field_value['design_text']); ?></p>

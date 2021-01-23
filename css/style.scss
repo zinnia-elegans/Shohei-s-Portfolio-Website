@@ -133,6 +133,14 @@ a {
     @include mq(lg) {
         margin-top: 100px;
     }
+
+    @include mq(md) {
+        margin-top: 50px;
+    }
+
+    @include mq(sm) {
+        margin-top: 20px;
+    }
 }
 
 .title-text {
@@ -238,7 +246,7 @@ button[type=button] {
     }
 
     @include mq(sm) {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -304,6 +312,14 @@ button[type=button] {
     position: relative;
     text-decoration: none;
     border: none;
+
+    @include mq(lg) {
+        font-size: 20px;
+    }
+
+    @include mq(sm) {
+        font-size: 16px;
+    }
 }
 
 
@@ -543,6 +559,9 @@ header #nav-toggle > div > span.toggle {
 #global-nav ul li:nth-child(4) {
     transition-delay: .25s;
 }
+#global-nav ul li:nth-child(5) {
+    transition-delay: .35s;
+}
 /* open */
 .open {
     overflow: hidden;
@@ -558,6 +577,24 @@ header #nav-toggle > div > span.toggle {
     transition: opacity .9s ease, -webkit-transform 1s ease;
     transition: transform 1s ease, opacity .9s ease;
     transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
+}
+
+/* sns */
+.fab {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.service-option {
+    font-size: 18px;
+    text-align: left;
+    padding: 5px 0;
+    margin-left: 30px;
+}
+
+.header-sns {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*===========================
@@ -654,6 +691,10 @@ header #nav-toggle > div > span.toggle {
     width: 50%;
     margin: 50px auto 0;
     color: $color-subtext;
+
+    @include mq(sm) {
+        width: 80%;
+    }
 }
 
 /* アニメーション設定 */
@@ -661,7 +702,11 @@ header #nav-toggle > div > span.toggle {
     position: absolute;
     left: 0;
     top: 0;
-    height: 200px
+    height: 200px;
+
+    @include mq(md) {
+        display: none;
+    }
   }
   
   .arrowInner p {
@@ -714,6 +759,10 @@ header #nav-toggle > div > span.toggle {
 //   トップへ戻る
 .to_top {
     position: relative;
+
+    @include mq(md) {
+        display: none;
+    }
 }
 
 .arrowWrapTop {
@@ -832,7 +881,7 @@ header #nav-toggle > div > span.toggle {
 }
 
 /*===========================
-      price
+      price(business)
 =============================*/
 .price {
     // background-color:#E1DDDD;
@@ -891,7 +940,11 @@ header #nav-toggle > div > span.toggle {
     background-color: $color-white;
     position: relative;
     border: 1px solid #e7e6e6;
-    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+
+    &:hover {
+        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+        transition: 0.7s;
+    }
 
     @include mq(xl) {
         padding: 50px 20px 180px;
@@ -1021,7 +1074,7 @@ header #nav-toggle > div > span.toggle {
 =============================*/
 .work-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 100px;
@@ -1033,11 +1086,12 @@ header #nav-toggle > div > span.toggle {
 
     @include mq(md) {
         padding: 0 20px;
+        margin-top: 50px;
     }
 }
 
 .work-content {
-    flex: 0 0 30%;
+    flex: 0 0 33.3333%;
     padding:16px;
 
     img {
@@ -1177,7 +1231,7 @@ header #nav-toggle > div > span.toggle {
     }
 
     @include mq(sm) {
-        padding: 0 50px;
+        padding: 0 30px;
     }
 }
 
@@ -1198,6 +1252,10 @@ header #nav-toggle > div > span.toggle {
     @include mq(md) {
         margin: 10px auto;
     }
+
+    @include mq(sm) {
+        font-size: 20px;
+    }
 }
 
 .about-name-english {
@@ -1207,6 +1265,11 @@ header #nav-toggle > div > span.toggle {
 
     @include mq(xl) {
         font-size: 20px;
+    }
+
+    @include mq(sm) {
+        font-size: 18px;
+        margin-left: 10px;
     }
 }
 
@@ -1242,6 +1305,14 @@ header #nav-toggle > div > span.toggle {
     color: $color-blue;
     font-size: 24px;
     position: relative;
+
+    @include mq(lg) {
+        font-size: 18px;
+    }
+
+    @include mq(sm) {
+        font-size: 14px;
+    }
 
     // 吹き出し
     //   &:before,
@@ -1286,7 +1357,6 @@ header #nav-toggle > div > span.toggle {
 #menu-footer-menu {
     text-align: center;
     margin: 10px 0;
-    
   }
    
 #menu-footer-menu li {
@@ -1331,10 +1401,26 @@ header #nav-toggle > div > span.toggle {
 .sub-main-image {
     width: 100%;
     height: 400px;
+
+    @include mq(xl) {
+        height: 300px;
+    }
+
+    @include mq(lg) {
+        height: 200px;
+    }
+
+    @include mq(md) {
+        height: 150px;
+    }
 }
 
 .breadcrumbs {
     margin-top: 10px;
+
+    @include mq(md) {
+        margin-left: 20px;
+    }
 }
 
 /*=====================================
@@ -1412,6 +1498,18 @@ header #nav-toggle > div > span.toggle {
 
 .service-page-wrapper {
     margin-top: 150px;
+
+    @include mq(xl) {
+        margin-top: 130px;
+    }
+
+    @include mq(lg) {
+        margin-top: 100px;
+    }
+
+    @include mq(md) {
+        margin-top: 70px;
+    }
 }
 
 .service-page-title {
@@ -1437,6 +1535,12 @@ header #nav-toggle > div > span.toggle {
     justify-content: space-between;
     width: 80%;
     margin: 40px auto 0;
+
+    @include mq(md) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .service-page-image {
@@ -1451,6 +1555,12 @@ header #nav-toggle > div > span.toggle {
     color: $color-subtext;
     margin: 20px;
     width: 60%;
+
+    @include mq(md) {
+        width: 80%;
+        margin: 20px auto;
+        text-align: left;
+    }
 }
 
 .service-page-video {
@@ -1466,6 +1576,10 @@ header #nav-toggle > div > span.toggle {
     @include mq(lg) {
         padding-top: 20px;
         height: 200px;
+    }
+
+    @include mq(md) {
+        margin: 20px auto;
     }
 }
 
@@ -1492,6 +1606,14 @@ header #nav-toggle > div > span.toggle {
     width: 50%;
     margin: 0 auto;
     color: $color-subtext;
+
+    @include mq(lg) {
+        width: 70%;
+    }
+
+    @include mq(md) {
+        width: 80%;
+    } 
 }
 
 .ec-video {
@@ -1507,6 +1629,10 @@ header #nav-toggle > div > span.toggle {
     @include mq(lg) {
         padding-top: 20px;
         height: 200px;
+    }
+
+    @include mq(md) {
+        width: 80%;
     }
 }
 
@@ -1524,12 +1650,21 @@ header #nav-toggle > div > span.toggle {
     width: 80%;
     margin: 60px auto;
     position: relative;
+
+    @include mq(md) {
+        width: 90%;
+    }
+
 }
 
 .ec-flow-content {
     width: 100%;
     position: relative;
     padding: 20px 50px;
+
+    @include mq(md) {
+        padding: 20px 20px;
+    }
 }
 
 .ec-price-number {
@@ -1538,6 +1673,11 @@ header #nav-toggle > div > span.toggle {
     left: -20px;
     font-size: 40px;
     font-weight: bold;
+
+    @include mq(md) {
+        font-size: 30px;
+        top: -60px;
+    }
 }
 
 .ex-flow-top {
@@ -1548,11 +1688,27 @@ header #nav-toggle > div > span.toggle {
 
 .ec-flow-title {
     font-size: 24px;
+
+    @include mq(md) {
+        font-size: 18px;
+    }
+
+    @include mq(sm) {
+        display: none;
+    }
 }
 
 .ec-flow-subtitle {
     color: $color-subtext;
     font-size: 18px;
+
+    @include mq(md) {
+        font-size: 14px;
+    }
+
+    @include mq(sm) {
+        display: none;
+    }
 }
 
 .ec-flow-content-bottom {
@@ -1563,11 +1719,26 @@ header #nav-toggle > div > span.toggle {
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
     margin: auto;
+
+    @include mq(sm) {
+        position: relative;
+        top: 60%;
+        left: 50%;
+        width: 100%;
+    }
 }
 
 .ec-flow-text {
     font-size: 14px;
     color: $color-subtext;
+
+    @include mq(md) {
+        font-size: 10px;
+    }
+
+    @include mq(sm) {
+        margin-top: 80px;
+    }
 }
 
 .ec-flow-arrow {
@@ -1611,6 +1782,10 @@ header #nav-toggle > div > span.toggle {
         border-bottom: 2px solid #25AF01;
         transform: rotate(-45deg);
     }
+
+    @include mq(md) {
+        font-size: 12px;
+    }
 }
 
 .ec-price-all {
@@ -1621,6 +1796,10 @@ header #nav-toggle > div > span.toggle {
 
 .ec-price-all-yen {
     font-size: 40px;
+
+    @include mq(md) {
+        font-size: 24px;
+    }
 }
 
 .ec-price-all-fee {
@@ -1632,12 +1811,20 @@ header #nav-toggle > div > span.toggle {
     margin: 0 auto;
     margin-top: 40px;
     color: $color-subtext;
+
+    @include mq(md) {
+        font-size: 12px;
+    }
 }
 
 .plan-detail {
     width: 60%;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
+
+    @include mq(md) {
+        width: 80%;
+    }
 }
 
 .plan-detail-text {
@@ -1652,6 +1839,10 @@ header #nav-toggle > div > span.toggle {
     width: 65%;
     margin: 0 auto;
     margin-top: 100px;
+
+    @include mq(md) {
+        width: 98%;
+    }
 }
   
 .tab {
@@ -1664,6 +1855,10 @@ header #nav-toggle > div > span.toggle {
     float: left;
     cursor: pointer;
     font-size: 16px;
+
+    @include mq(md) {
+        font-size: 12px;
+    }
 }
 
 .selected {
@@ -1766,7 +1961,7 @@ header #nav-toggle > div > span.toggle {
       font-size: 24px;
       font-weight: bold;
   }
-  @media screen and (max-width: 600px) {
+  @include mq(md) {
     .web-site-table {
       border: 0;
       width:100%
@@ -1774,7 +1969,7 @@ header #nav-toggle > div > span.toggle {
     .web-site-table th{
       display: block;
       border-right: none;
-      border-bottom: 2px solid #0f7d13;
+      border-bottom: 2px solid $color-subtext;
       padding-bottom: .6em;
       margin-bottom: .6em;
   
@@ -1793,7 +1988,7 @@ header #nav-toggle > div > span.toggle {
     .web-site-table tr {
       display: block;
       margin-bottom: 2em;
-          border-bottom: 2px solid #0f7d13;
+          border-bottom: 2px solid $color-subtext;
     }
     
     .web-site-table td {
@@ -1817,221 +2012,6 @@ header #nav-toggle > div > span.toggle {
       border-bottom: 0;
     }
   }
-
-
-/*=====================================
-# business.html
-=======================================*/
-.business-page {
-    margin-top: 100px;
-}
-
-.business-page-title {
-    font-size: 30px;
-    text-align: center;
-    color: $color-subtext;
-}
-
-.business-page-price {
-    margin-top: 100px;
-    color: $color-subtext;
-}
-
-.business-price-title {
-    font-size: 30px;
-    color: $color-subtext;
-    text-align: center;
-
-    @include mq(lg) {
-        font-size: 20px;
-    }
-
-    @include mq(sm) {
-        font-size: 14px;
-    }
-}
-
-.business-price-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    @include mq(lg) {
-        display: block;
-    }
-
-    @include mq(md) {
-        padding: 0 50px;
-    }
-    @include mq(sm) {
-        padding: 0 10px;
-    }
-}
-
-.business-price-content {
-    flex: 0 0 30%;
-    padding: 80px 40px;
-    border: 1px solid $color-subtext;
-    text-align: center;
-    position: relative;
-
-    @include mq(lg) {
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    @include mq(md) {
-        margin: 0 auto;
-        width: 100%;
-        padding: 80px 95px;
-
-        & + & {
-            margin-top: 20px;
-        }
-    }
-
-    @include mq(sm) {
-        padding: 80px 20px;
-    }
-}
-
-.business-price-content-title {
-    font-size: 20px;
-    color: $color-subtext;
-}
-
-.business-page-line {
-    border-bottom: 1px solid $color-subtext;
-    width: 100px;
-    margin: 0 auto;
-}
-
-.business-price-content-text {
-    text-align: left;
-    margin-top: 40px;
-    color: $color-subtext;
-}
-
-.business-price-content-price {
-    font-size: 20px;
-    width: 110px;
-    bottom: 10px;
-    right: 15px;
-    position: absolute;
-    color: $color-text;
-    border-bottom: 1px solid $color-text;
-}
-
-.business-page-price-text {
-    text-align: center;
-    font-size: 14px;
-    color: $color-subtext;
-    margin-top: 20px;
-
-    @include mq(lg) {
-        width: 50%;
-        margin: 20px auto;
-    }
-
-    @include mq(md) {
-        width: 80%;
-        text-align: left;
-    }
-}
-
-.business-price-all-price {
-    text-align: right;
-    font-size: 40px;
-    margin-top: 60px;
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        right: -150px;
-        bottom: 0;
-        display: inline-block;
-        width: 310px;
-        height: 1px;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);/*位置調整*/
-        background-color: $color-text;/*線の色*/
-    }
-
-    @include mq(lg) {
-        text-align: center;
-
-        &::before {
-            right: 0px;
-        }
-    }
-
-    @include mq(md) {
-
-        &::before {
-            right: -50px;
-        }
-    }
-
-    @include mq(sm) {
-        font-size: 25px;
-
-        &::before {
-            display: none;
-        }
-    }
-}
-
-.business-page-price {
-    padding: 0 50px;
-}
-
-.animation-price-content {
-    border: 1px solid $color-subtext;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-    padding: 50px 0;
-
-    @include mq(lg) {
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    @include mq(md) {
-        margin: 0 auto;
-        width: 100%;
-        padding: 80px 85px;
-    }
-
-    @include mq(sm) {
-        padding: 80px 40px;
-    }
-}
-
-.business-page-icon {
-    margin: auto;
-
-    img {
-        width: 20px;
-        height: auto;
-    }
-
-    @include mq(lg) {
-        text-align: center;
-        margin: 30px;
-    }
-}
-
-.animation-price-content-text {
-    font-size: 18px;
-    color: $color-subtext;
-    margin: 40px auto;
-}
-
-.animation-price-content-text2 {
-    @extend.animation-price-content-text;
-    margin-bottom: 0;
-}
 
 /*=====================================
 # work.html

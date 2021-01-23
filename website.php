@@ -126,14 +126,14 @@ Template Name: Web site
             <tr>
                 <th>下層ページデザイン</th>
                 <td data-label="内容" class="txt">
-                    トップページのデザインを元に、下層ページをデザインします。使用する画像の枚数や、文章量によって費用は変わってきますので、別途ご相談ください。
+                    トップページのデザインを元に、下層ページをデザインします。使用する画像の枚数や、文章量によって費用は変わってきますので、事前にご相談ください。
                 </td>
                 <td data-label="価格" class="web-site-price">1ページ / <span class="web-site-price-all">¥10,000~</span></td>
             </tr>
             <tr>
                 <th>レスポンシブデザイン</th>
                 <td data-label="内容" class="txt">
-                    PCサイズのデザインを元に、スマホ版のデザインを制作します。
+                    PCサイズのデザインを元に、スマホ版のデザインを作成いたします。
                 </td>
                 <td data-label="価格" class="web-site-price">1ページ / <span class="web-site-price-all">¥5,000~</span></td>
             </tr>
@@ -165,21 +165,21 @@ Template Name: Web site
             <tr>
                 <th>下層ページコーディング</th>
                 <td data-label="内容" class="txt">
-                    デザインを元に、HTML + CSSでコーディングし、jQueryを用いてアニメーションも追加します。
+                    トップページと同じように、下層ページもコーディングいたします。
                 </td>
                 <td data-label="価格" class="web-site-price">1ページ / <span class="web-site-price-all">¥5,000~</span></td>
             </tr>
             <tr>
                 <th>レスポンシブコーディング</th>
                 <td data-label="内容" class="txt">
-                    スマホ版デザインを元に、HTML + CSSを用いて、コーディングします。
+                    スマホ版デザインを元に、サイズを最適化いたします。
                 </td>
                 <td data-label="価格" class="web-site-price">1ページ / <span class="web-site-price-all">¥2,500~</span></td>
             </tr>
             <tr>
                 <th>WordPress</th>
                 <td data-label="内容" class="txt">
-                    WordPressを用いた更新システムを導入いたします。今後、差し替える可能性のあるテキスト、画像、動画等、ご希望の箇所に更新機能を実装します。
+                    WordPressを用いた更新システムを導入いたします。今後、差し替える可能性のあるテキスト、画像、動画等、ご希望の箇所に更新機能を実装いたします。
                 </td>
                 <td data-label="価格" class="web-site-price">1ページ / <span class="web-site-price-all">¥10,000~</span></td>
             </tr>
@@ -207,12 +207,12 @@ Template Name: Web site
                             <p class="ec-price-content-text">トップページデザイン x 1</p>
                             <p class="ec-price-content-text">トップページコーディング x 1</p>
                             <p class="ec-price-content-text">お問い合わせフォーム設置</p>
-                            <p class="ec-price-content-text">レスポンシブ対応</p>
+                            <p class="ec-price-content-text">スマホ版対応</p>
                             <p class="ec-price-content-explain">
                                 基本的な構成のLPサイトです。予算に限りがある場合は、テンプレートを使用した安価なプランもございますので、ご相談ください。
                             </p>
                             <div class="ec-price-all">
-                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">50,000</span>円</p>
+                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">50,000</span>円〜</p>
                             </div>
                         </div>
                     </div>
@@ -225,12 +225,12 @@ Template Name: Web site
                             <p class="ec-price-content-text">トップページコーディング x 1</p>
                             <p class="ec-price-content-text">下層ページコーディング x 4p</p>
                             <p class="ec-price-content-text">お問い合わせフォーム設置</p>
-                            <p class="ec-price-content-text">レスポンシブ対応</p>
+                            <p class="ec-price-content-text">スマホ版対応</p>
                             <p class="ec-price-content-explain">
-                                基本的な構成のHPサイトです。下層ページが4pよりも少ない場合は、割引させていただきます。
+                                基本的な構成のHPサイトです。下層ページが4pより少ない場合は、割引させていただきます。
                             </p>
                             <div class="ec-price-all">
-                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">100,000</span>円</p>
+                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">100,000</span>円〜</p>
                             </div>
                         </div>
                     </div>
@@ -243,19 +243,25 @@ Template Name: Web site
                             <p class="ec-price-content-text">トップページコーディング x 1</p>
                             <p class="ec-price-content-text">下層ページコーディング x 4p</p>
                             <p class="ec-price-content-text">お問い合わせフォーム設置</p>
-                            <p class="ec-price-content-text">レスポンシブ対応</p>
+                            <p class="ec-price-content-text">スマホ版対応</p>
                             <p class="ec-price-content-text">WordPress実装</p>
                             <p class="ec-price-content-explain">
-                                基本的な構成のHPサイトです。下層ページが4pよりも少ない場合は、割引させていただきます。
+                                基本的な構成のHPサイトに、更新機能を追加した場合の予算目安です。更新機能にはWordPressを使用します。お客様自身で画像やテキストを差し替えることができるように、サイトをカスタマイズいたします。
                             </p>
                             <div class="ec-price-all">
-                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">150,000</span>円</p>
+                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">150,000</span>円〜</p>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+        </div>
+
+        <!-- プラン説明 -->
+        <div class="plan-detail">
+            <p class="plan-detail-text">※ サイトに使用する文章や画像は予めご用意ください。</p>
+            <p class="plan-detail-text">※ サーバー契約にかかる初期費用及び、ドメイン取得の月額料金はお客様のご負担となります。</p>
         </div>
 
         <!-- web sites -->

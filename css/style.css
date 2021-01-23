@@ -123,6 +123,18 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .title-wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-wrapper {
+    margin-top: 20px;
+  }
+}
+
 .title-text {
   font-family: 'Crimson Text', Century;
   font-size: 40px;
@@ -230,7 +242,7 @@ button[type=button]:focus {
 
 @media screen and (max-width: 576px) {
   .price-more-read {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -297,6 +309,18 @@ button[type=button]:focus {
   position: relative;
   text-decoration: none;
   border: none;
+}
+
+@media screen and (max-width: 992px) {
+  .contact-more-read-button {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-more-read-button {
+    font-size: 16px;
+  }
 }
 
 /*===========================
@@ -559,6 +583,10 @@ header #nav-toggle > div > span.toggle {
   transition-delay: .25s;
 }
 
+#global-nav ul li:nth-child(5) {
+  transition-delay: .35s;
+}
+
 /* open */
 .open {
   overflow: hidden;
@@ -576,6 +604,24 @@ header #nav-toggle > div > span.toggle {
   transition: opacity .9s ease, -webkit-transform 1s ease;
   transition: transform 1s ease, opacity .9s ease;
   transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
+}
+
+/* sns */
+.fab {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.service-option {
+  font-size: 18px;
+  text-align: left;
+  padding: 5px 0;
+  margin-left: 30px;
+}
+
+.header-sns {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*===========================
@@ -687,12 +733,24 @@ header #nav-toggle > div > span.toggle {
   color: #6C757D;
 }
 
+@media screen and (max-width: 576px) {
+  .concept-content {
+    width: 80%;
+  }
+}
+
 /* アニメーション設定 */
 .arrowWrap {
   position: absolute;
   left: 0;
   top: 0;
   height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .arrowWrap {
+    display: none;
+  }
 }
 
 .arrowInner p {
@@ -742,6 +800,12 @@ header #nav-toggle > div > span.toggle {
 /* アニメーション設定 */
 .to_top {
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .to_top {
+    display: none;
+  }
 }
 
 .arrowWrapTop {
@@ -864,7 +928,7 @@ header #nav-toggle > div > span.toggle {
 }
 
 /*===========================
-      price
+      price(business)
 =============================*/
 .price {
   min-height: 1250px;
@@ -931,7 +995,11 @@ header #nav-toggle > div > span.toggle {
   background-color: #fbfbfb;
   position: relative;
   border: 1px solid #e7e6e6;
+}
+
+.business-content:hover {
   box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.7s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1081,7 +1149,7 @@ header #nav-toggle > div > span.toggle {
 =============================*/
 .work-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 100px;
@@ -1097,11 +1165,12 @@ header #nav-toggle > div > span.toggle {
 @media screen and (max-width: 768px) {
   .work-wrapper {
     padding: 0 20px;
+    margin-top: 50px;
   }
 }
 
 .work-content {
-  flex: 0 0 30%;
+  flex: 0 0 33.3333%;
   padding: 16px;
 }
 
@@ -1267,7 +1336,7 @@ header #nav-toggle > div > span.toggle {
 
 @media screen and (max-width: 576px) {
   .about-content {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 }
 
@@ -1294,6 +1363,12 @@ header #nav-toggle > div > span.toggle {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .about-name-japanese {
+    font-size: 20px;
+  }
+}
+
 .about-name-english {
   font-size: 24px;
   margin-left: 30px;
@@ -1303,6 +1378,13 @@ header #nav-toggle > div > span.toggle {
 @media screen and (max-width: 1200px) {
   .about-name-english {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-name-english {
+    font-size: 18px;
+    margin-left: 10px;
   }
 }
 
@@ -1344,6 +1426,18 @@ header #nav-toggle > div > span.toggle {
   color: #03A1E9;
   font-size: 24px;
   position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .top-contact-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .top-contact-text {
+    font-size: 14px;
+  }
 }
 
 .fa-envelope {
@@ -1410,8 +1504,32 @@ header #nav-toggle > div > span.toggle {
   height: 400px;
 }
 
+@media screen and (max-width: 1200px) {
+  .sub-main-image {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sub-main-image {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sub-main-image {
+    height: 150px;
+  }
+}
+
 .breadcrumbs {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    margin-left: 20px;
+  }
 }
 
 /*=====================================
@@ -1485,6 +1603,24 @@ header #nav-toggle > div > span.toggle {
   margin-top: 150px;
 }
 
+@media screen and (max-width: 1200px) {
+  .service-page-wrapper {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .service-page-wrapper {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-page-wrapper {
+    margin-top: 70px;
+  }
+}
+
 .service-page-title {
   font-size: 18px;
   text-align: center;
@@ -1510,6 +1646,14 @@ header #nav-toggle > div > span.toggle {
   margin: 40px auto 0;
 }
 
+@media screen and (max-width: 768px) {
+  .service-page-content {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .service-page-image {
   width: 40%;
   object-fit: cover;
@@ -1522,6 +1666,14 @@ header #nav-toggle > div > span.toggle {
   color: #6C757D;
   margin: 20px;
   width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .service-page-text {
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+  }
 }
 
 .service-page-video {
@@ -1539,6 +1691,12 @@ header #nav-toggle > div > span.toggle {
   .service-page-video {
     padding-top: 20px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-page-video {
+    margin: 20px auto;
   }
 }
 
@@ -1567,6 +1725,18 @@ header #nav-toggle > div > span.toggle {
   color: #6C757D;
 }
 
+@media screen and (max-width: 992px) {
+  .ec-top-text {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ec-top-text {
+    width: 80%;
+  }
+}
+
 .ec-video {
   width: 50%;
   height: 0;
@@ -1580,6 +1750,12 @@ header #nav-toggle > div > span.toggle {
   .ec-video {
     padding-top: 20px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ec-video {
+    width: 80%;
   }
 }
 
@@ -1599,10 +1775,22 @@ header #nav-toggle > div > span.toggle {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .ec-flow-wrapper {
+    width: 90%;
+  }
+}
+
 .ec-flow-content {
   width: 100%;
   position: relative;
   padding: 20px 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .ec-flow-content {
+    padding: 20px 20px;
+  }
 }
 
 .ec-price-number {
@@ -1611,6 +1799,13 @@ header #nav-toggle > div > span.toggle {
   left: -20px;
   font-size: 40px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .ec-price-number {
+    font-size: 30px;
+    top: -60px;
+  }
 }
 
 .ex-flow-top {
@@ -1623,9 +1818,33 @@ header #nav-toggle > div > span.toggle {
   font-size: 24px;
 }
 
+@media screen and (max-width: 768px) {
+  .ec-flow-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ec-flow-title {
+    display: none;
+  }
+}
+
 .ec-flow-subtitle {
   color: #6C757D;
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .ec-flow-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ec-flow-subtitle {
+    display: none;
+  }
 }
 
 .ec-flow-content-bottom {
@@ -1638,9 +1857,30 @@ header #nav-toggle > div > span.toggle {
   margin: auto;
 }
 
+@media screen and (max-width: 576px) {
+  .ec-flow-content-bottom {
+    position: relative;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+  }
+}
+
 .ec-flow-text {
   font-size: 14px;
   color: #6C757D;
+}
+
+@media screen and (max-width: 768px) {
+  .ec-flow-text {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ec-flow-text {
+    margin-top: 80px;
+  }
 }
 
 .ec-flow-arrow {
@@ -1683,6 +1923,12 @@ header #nav-toggle > div > span.toggle {
   transform: rotate(-45deg);
 }
 
+@media screen and (max-width: 768px) {
+  .ec-price-content-text {
+    font-size: 12px;
+  }
+}
+
 .ec-price-all {
   display: flex;
   justify-content: flex-end;
@@ -1691,6 +1937,12 @@ header #nav-toggle > div > span.toggle {
 
 .ec-price-all-yen {
   font-size: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .ec-price-all-yen {
+    font-size: 24px;
+  }
 }
 
 .ec-price-all-fee {
@@ -1704,10 +1956,22 @@ header #nav-toggle > div > span.toggle {
   color: #6C757D;
 }
 
+@media screen and (max-width: 768px) {
+  .ec-price-content-explain {
+    font-size: 12px;
+  }
+}
+
 .plan-detail {
   width: 60%;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .plan-detail {
+    width: 80%;
+  }
 }
 
 .plan-detail-text {
@@ -1724,6 +1988,12 @@ header #nav-toggle > div > span.toggle {
   margin-top: 100px;
 }
 
+@media screen and (max-width: 768px) {
+  #wrap {
+    width: 98%;
+  }
+}
+
 .tab {
   height: 40px;
   width: 33.333%;
@@ -1734,6 +2004,12 @@ header #nav-toggle > div > span.toggle {
   float: left;
   cursor: pointer;
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .tab {
+    font-size: 12px;
+  }
 }
 
 .selected {
@@ -1840,7 +2116,7 @@ header #nav-toggle > div > span.toggle {
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .web-site-table {
     border: 0;
     width: 100%;
@@ -1848,7 +2124,7 @@ header #nav-toggle > div > span.toggle {
   .web-site-table th {
     display: block;
     border-right: none;
-    border-bottom: 2px solid #0f7d13;
+    border-bottom: 2px solid #6C757D;
     padding-bottom: .6em;
     margin-bottom: .6em;
   }
@@ -1865,7 +2141,7 @@ header #nav-toggle > div > span.toggle {
   .web-site-table tr {
     display: block;
     margin-bottom: 2em;
-    border-bottom: 2px solid #0f7d13;
+    border-bottom: 2px solid #6C757D;
   }
   .web-site-table td {
     border-bottom: 1px solid #bbb;
@@ -1885,250 +2161,6 @@ header #nav-toggle > div > span.toggle {
   .web-site-table td:last-child {
     border-bottom: 0;
   }
-}
-
-/*=====================================
-# business.html
-=======================================*/
-.business-page {
-  margin-top: 100px;
-}
-
-.business-page-title {
-  font-size: 30px;
-  text-align: center;
-  color: #6C757D;
-}
-
-.business-page-price {
-  margin-top: 100px;
-  color: #6C757D;
-}
-
-.business-price-title {
-  font-size: 30px;
-  color: #6C757D;
-  text-align: center;
-}
-
-@media screen and (max-width: 992px) {
-  .business-price-title {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .business-price-title {
-    font-size: 14px;
-  }
-}
-
-.business-price-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-@media screen and (max-width: 992px) {
-  .business-price-wrapper {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .business-price-wrapper {
-    padding: 0 50px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .business-price-wrapper {
-    padding: 0 10px;
-  }
-}
-
-.business-price-content {
-  flex: 0 0 30%;
-  padding: 80px 40px;
-  border: 1px solid #6C757D;
-  text-align: center;
-  position: relative;
-}
-
-@media screen and (max-width: 992px) {
-  .business-price-content {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .business-price-content {
-    margin: 0 auto;
-    width: 100%;
-    padding: 80px 95px;
-  }
-  .business-price-content + .business-price-content {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .business-price-content {
-    padding: 80px 20px;
-  }
-}
-
-.business-price-content-title {
-  font-size: 20px;
-  color: #6C757D;
-}
-
-.business-page-line {
-  border-bottom: 1px solid #6C757D;
-  width: 100px;
-  margin: 0 auto;
-}
-
-.business-price-content-text {
-  text-align: left;
-  margin-top: 40px;
-  color: #6C757D;
-}
-
-.business-price-content-price {
-  font-size: 20px;
-  width: 110px;
-  bottom: 10px;
-  right: 15px;
-  position: absolute;
-  color: #2d2d2d;
-  border-bottom: 1px solid #2d2d2d;
-}
-
-.business-page-price-text {
-  text-align: center;
-  font-size: 14px;
-  color: #6C757D;
-  margin-top: 20px;
-}
-
-@media screen and (max-width: 992px) {
-  .business-page-price-text {
-    width: 50%;
-    margin: 20px auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .business-page-price-text {
-    width: 80%;
-    text-align: left;
-  }
-}
-
-.business-price-all-price {
-  text-align: right;
-  font-size: 40px;
-  margin-top: 60px;
-  position: relative;
-}
-
-.business-price-all-price::before {
-  content: "";
-  position: absolute;
-  right: -150px;
-  bottom: 0;
-  display: inline-block;
-  width: 310px;
-  height: 1px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  /*位置調整*/
-  background-color: #2d2d2d;
-  /*線の色*/
-}
-
-@media screen and (max-width: 992px) {
-  .business-price-all-price {
-    text-align: center;
-  }
-  .business-price-all-price::before {
-    right: 0px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .business-price-all-price::before {
-    right: -50px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .business-price-all-price {
-    font-size: 25px;
-  }
-  .business-price-all-price::before {
-    display: none;
-  }
-}
-
-.business-page-price {
-  padding: 0 50px;
-}
-
-.animation-price-content {
-  border: 1px solid #6C757D;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding: 50px 0;
-}
-
-@media screen and (max-width: 992px) {
-  .animation-price-content {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .animation-price-content {
-    margin: 0 auto;
-    width: 100%;
-    padding: 80px 85px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .animation-price-content {
-    padding: 80px 40px;
-  }
-}
-
-.business-page-icon {
-  margin: auto;
-}
-
-.business-page-icon img {
-  width: 20px;
-  height: auto;
-}
-
-@media screen and (max-width: 992px) {
-  .business-page-icon {
-    text-align: center;
-    margin: 30px;
-  }
-}
-
-.animation-price-content-text, .animation-price-content-text2 {
-  font-size: 18px;
-  color: #6C757D;
-  margin: 40px auto;
-}
-
-.animation-price-content-text2 {
-  margin-bottom: 0;
 }
 
 /*=====================================

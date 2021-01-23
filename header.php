@@ -39,20 +39,25 @@
                     </div>
                 </div>
                 <div id="global-nav">
+                    <?php
+                    wp_nav_menu(
+
+                        array(
+                            'depth' => 1,
+                            'theme_location' => 'drawer', //グローバルメニューをここに表示すると指定
+                            'container' => 'nav',
+                            'container_class' => 'drawer-menu-item',
+                            'menu_class' => 'drawer-list',
+                        )
+                    );
+                    ?>
                     <nav>
                         <ul>
-                            <?php
-                            wp_nav_menu(
-
-                                array(
-                                    'depth' => 1,
-                                    'theme_location' => 'drawer', //グローバルメニューをここに表示すると指定
-                                    'container' => 'nav',
-                                    'container_class' => 'drawer-menu-item',
-                                    'menu_class' => 'drawer-list',
-                                )
-                            );
-                            ?>
+                            <li class="header-sns">
+                                <a href="https://twitter.com/ShoheiShimizu" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/zinnia.elegans/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100045366891800" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
