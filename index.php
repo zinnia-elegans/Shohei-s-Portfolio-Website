@@ -80,7 +80,7 @@
     </div>
     <div class="business-wrapper wow fadeIn">
 
-        <div class="business-content">
+        <a href="https://shoheishimizu.com/service/ec-site" class="business-content">
             <p class="business-content-title">ECサイト構築</p>
             <?php
             $ec_site = SCF::get('ec_site', 115);
@@ -90,10 +90,10 @@
                     <li class="business-content-text"><?php echo esc_html($field_value['ec_site_text']); ?></li>
                 </ul>
             <?php } ?>
-            <p class="business-price"><span class="business-price-size">30,000</span>円〜</p>
-        </div>
+            <p class="business-price"><span class="business-price-size">10,000</span>円〜</p>
+        </a>
 
-        <div class="business-content">
+        <a href="https://shoheishimizu.com/service/business-animation/" class="business-content">
             <p class="business-content-title">ビジネスアニメーション</p>
             <?php
             $business_animation = SCF::get('business_animation', 122);
@@ -103,10 +103,10 @@
                     <li class="business-content-text"><?php echo esc_html($field_value['business_animation_text']); ?></li>
                 </ul>
             <?php } ?>
-            <p class="business-price">30秒 / <span class="business-price-size">40,000</span>円〜</p>
-        </div>
+            <p class="business-price">30秒 / <span class="business-price-size">30,000</span>円〜</p>
+        </a>
 
-        <div class="business-content">
+        <a href="https://shoheishimizu.com/service/web-site" class="business-content">
             <p class="business-content-title">Webデザイン</p>
             <?php
             $web_design = SCF::get('web_design', 125);
@@ -117,9 +117,9 @@
                 </ul>
             <?php } ?>
             <p class="business-price">1ページ / <span class="business-price-size">20,000</span>円〜</p>
-        </div>
+        </a>
 
-        <div class="business-content">
+        <a href="https://shoheishimizu.com/service/web-site" class="business-content">
             <p class="business-content-title">Webサイト</p>
             <?php
             $web_site = SCF::get('web_site', 128);
@@ -131,7 +131,7 @@
             <?php } ?>
             <p class="business-sub-price">LP / <span class="business-price-size">30,000</span>円〜</p>
             <p class="business-price">HP / <span class="business-price-size">50,000</span>円〜</p>
-        </div>
+        </a>
 
 
 

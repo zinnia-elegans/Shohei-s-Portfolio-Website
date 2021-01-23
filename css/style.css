@@ -323,6 +323,63 @@ button[type=button]:focus {
   }
 }
 
+.complete-more-read {
+  width: 30%;
+  background-color: #03A1E9;
+  border: 1px solid #03A1E9;
+  border-radius: 3px;
+  text-align: center;
+  margin: 80px auto 0;
+}
+
+.complete-more-read:hover {
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  transition: 0.7s;
+}
+
+.complete-more-read-button {
+  font-size: 24px;
+  height: 50px;
+  color: #fbfbfb;
+  font-family: 'YuMincho',Century;
+  width: 100%;
+  transition: all .2s;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+  border: none;
+  padding-right: 30px;
+}
+
+.complete-more-read-button::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  border-top: solid 3px #fbfbfb;
+  border-right: solid 3px #fbfbfb;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 87%;
+  margin-top: -5px;
+}
+
+@media screen and (max-width: 992px) {
+  .complete-more-read-button {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .complete-more-read-button {
+    font-size: 16px;
+  }
+}
+
 /*===========================
       header
 =============================*/
@@ -1453,6 +1510,7 @@ header #nav-toggle > div > span.toggle {
   background-color: #2d2d2d;
   color: #fbfbfb;
   padding: 50px 0;
+  width: 100%;
 }
 
 #menu-footer-menu {
@@ -2440,4 +2498,22 @@ textarea:focus::placeholder {
 
 :focus {
   outline: none;
+}
+
+/*=====================================
+# complete.php
+=======================================*/
+.complete {
+  text-align: center;
+  padding: 30px;
+}
+
+.complete-title {
+  font-size: 24px;
+  margin-bottom: 70px;
+}
+
+.complete-subtitle {
+  font-size: 16px;
+  margin-top: 20px;
 }

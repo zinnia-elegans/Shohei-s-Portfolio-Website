@@ -131,7 +131,7 @@ Template Name: animation
                 <td data-label="内容" class="txt">
                     動画の長さによって金額が変わります。お見積り時と実際にアニメーションが完成された際、秒数の誤差がでることがあります。予めご了承ください。
                 </td>
-                <td data-label="価格" class="web-site-price">+ <span class="web-site-price-all">¥1,000</span></td>
+                <td data-label="価格" class="web-site-price">+ <span class="web-site-price-all">¥500</span></td>
             </tr>
         </tbody>
     </table>

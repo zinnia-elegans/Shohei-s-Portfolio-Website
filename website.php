@@ -186,127 +186,128 @@ Template Name: Web site
         </tbody>
     </table>
 
-    <!-- Price -->
-    <section class="ec-price inner">
-        <div class="title-wrapper wow fadeIn">
-            <p class="title-text">Price</p>
-            <p class="title-subtext">料金目安</p>
-        </div>
+</section>
 
-        <div id="wrap">
-            <div id="tab1" class="tab selected">LP制作</div>
-            <div id="tab2" class="tab">HP制作</div>
-            <div id="tab3" class="tab">HP制作 + 更新機能</div>
+<!-- Price -->
+<section class="ec-price inner">
+    <div class="title-wrapper wow fadeIn">
+        <p class="title-text">Price</p>
+        <p class="title-subtext">料金目安</p>
+    </div>
 
-            <div id="container">
-                <div id="slide" class="wow fadeIn">
+    <div id="wrap">
+        <div id="tab1" class="tab selected">LP制作</div>
+        <div id="tab2" class="tab">HP制作</div>
+        <div id="tab3" class="tab">HP制作 + 更新機能</div>
 
-                    <!-- ベーシックプラン -->
-                    <div id="first" class="box">
-                        <div class="ec-price-content">
-                            <p class="ec-price-content-text">トップページデザイン x 1</p>
-                            <p class="ec-price-content-text">トップページコーディング x 1</p>
-                            <p class="ec-price-content-text">お問い合わせフォーム設置</p>
-                            <p class="ec-price-content-text">スマホ版対応</p>
-                            <p class="ec-price-content-explain">
-                                基本的な構成のLPサイトです。予算に限りがある場合は、テンプレートを使用した安価なプランもございますので、ご相談ください。
-                            </p>
-                            <div class="ec-price-all">
-                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">50,000</span>円〜</p>
-                            </div>
+        <div id="container">
+            <div id="slide" class="wow fadeIn">
+
+                <!-- ベーシックプラン -->
+                <div id="first" class="box">
+                    <div class="ec-price-content">
+                        <p class="ec-price-content-text">トップページデザイン x 1</p>
+                        <p class="ec-price-content-text">トップページコーディング x 1</p>
+                        <p class="ec-price-content-text">お問い合わせフォーム設置</p>
+                        <p class="ec-price-content-text">スマホ版対応</p>
+                        <p class="ec-price-content-explain">
+                            基本的な構成のLPサイトです。予算に限りがある場合は、テンプレートを使用した安価なプランもございますので、ご相談ください。
+                        </p>
+                        <div class="ec-price-all">
+                            <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">50,000</span>円〜</p>
                         </div>
                     </div>
-
-                    <!-- アドバンスプラン -->
-                    <div id="second" class="box">
-                        <div class="ec-price-content">
-                            <p class="ec-price-content-text">トップページデザイン x 1</p>
-                            <p class="ec-price-content-text">下層ページデザイン x 4</p>
-                            <p class="ec-price-content-text">トップページコーディング x 1</p>
-                            <p class="ec-price-content-text">下層ページコーディング x 4p</p>
-                            <p class="ec-price-content-text">お問い合わせフォーム設置</p>
-                            <p class="ec-price-content-text">スマホ版対応</p>
-                            <p class="ec-price-content-explain">
-                                基本的な構成のHPサイトです。下層ページが4pより少ない場合は、割引させていただきます。
-                            </p>
-                            <div class="ec-price-all">
-                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">100,000</span>円〜</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- プロプラン -->
-                    <div id="third" class="box">
-                        <div class="ec-price-content">
-                            <p class="ec-price-content-text">トップページデザイン x 1</p>
-                            <p class="ec-price-content-text">下層ページデザイン x 4</p>
-                            <p class="ec-price-content-text">トップページコーディング x 1</p>
-                            <p class="ec-price-content-text">下層ページコーディング x 4p</p>
-                            <p class="ec-price-content-text">お問い合わせフォーム設置</p>
-                            <p class="ec-price-content-text">スマホ版対応</p>
-                            <p class="ec-price-content-text">WordPress実装</p>
-                            <p class="ec-price-content-explain">
-                                基本的な構成のHPサイトに、更新機能を追加した場合の予算目安です。更新機能にはWordPressを使用します。お客様自身で画像やテキストを差し替えることができるように、サイトをカスタマイズいたします。
-                            </p>
-                            <div class="ec-price-all">
-                                <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">150,000</span>円〜</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </div>
 
-        <!-- プラン説明 -->
-        <div class="plan-detail">
-            <p class="plan-detail-text">※ サイトに使用する文章や画像は予めご用意ください。</p>
-            <p class="plan-detail-text">※ サーバー契約にかかる初期費用及び、ドメイン取得の月額料金はお客様のご負担となります。</p>
-        </div>
-
-        <!-- web sites -->
-        <section class="work-section inner">
-            <p class="work-title">Web Site</p>
-            <div class="work-wrapper wow fadeIn">
-                <?php
-                $work = SCF::get('works', 18);
-                foreach ($work as $field_name => $field_value) {
-                ?>
-                    <div class="work-content">
-                        <div class="work-content-image">
-                            <a href="<?php echo esc_html($field_value['works_link']); ?>" target="_blank" rel="noopener noreferrer">
-                                <?php
-                                if (wp_get_attachment_image_src($field_value['works_image'], 'large')) {
-                                    echo wp_get_attachment_image($field_value['works_image'], 'large');
-                                } else {
-                                    echo '<img src="' . esc_url(get_template_directory_uri()) . '/image/noimg.png" alt="No Image">';
-                                }
-                                ?>
-                            </a>
-                        </div>
-                        <div class="work-content-text">
-                            <p class="work-text"><?php echo esc_html($field_value['works_text']); ?></p>
+                <!-- アドバンスプラン -->
+                <div id="second" class="box">
+                    <div class="ec-price-content">
+                        <p class="ec-price-content-text">トップページデザイン x 1</p>
+                        <p class="ec-price-content-text">下層ページデザイン x 4</p>
+                        <p class="ec-price-content-text">トップページコーディング x 1</p>
+                        <p class="ec-price-content-text">下層ページコーディング x 4p</p>
+                        <p class="ec-price-content-text">お問い合わせフォーム設置</p>
+                        <p class="ec-price-content-text">スマホ版対応</p>
+                        <p class="ec-price-content-explain">
+                            一般的なページ構成、トップページ / 会社概要 / 事業内容 / 採用情報 / お問い合わせ 等を想定しております。ペース数が5Pより少ない場合は割引とさせていただきます。
+                        </p>
+                        <div class="ec-price-all">
+                            <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">100,000</span>円〜</p>
                         </div>
                     </div>
+                </div>
 
-                <?php } ?>
+                <!-- プロプラン -->
+                <div id="third" class="box">
+                    <div class="ec-price-content">
+                        <p class="ec-price-content-text">トップページデザイン x 1</p>
+                        <p class="ec-price-content-text">下層ページデザイン x 4</p>
+                        <p class="ec-price-content-text">トップページコーディング x 1</p>
+                        <p class="ec-price-content-text">下層ページコーディング x 4p</p>
+                        <p class="ec-price-content-text">お問い合わせフォーム設置</p>
+                        <p class="ec-price-content-text">スマホ版対応</p>
+                        <p class="ec-price-content-text">WordPress実装</p>
+                        <p class="ec-price-content-explain">
+                            基本的な構成のHPサイトに、更新機能を追加した場合の予算目安です。更新機能にはWordPressを使用します。お客様ご自身で画像やテキストを差し替えることができるように、サイトをカスタマイズいたします。
+                        </p>
+                        <div class="ec-price-all">
+                            <p class="ec-price-all-fee">料金（税込）<span class="ec-price-all-yen">150,000</span>円〜</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-        </section>
-
-        <div class="more-read">
-            <button onclick="location.href='https://shoheishimizu.com/contact'" class="more-read-button" type="button">無料でお見積り</button>
         </div>
+    </div>
 
+    <!-- プラン説明 -->
+    <div class="plan-detail">
+        <p class="plan-detail-text">※ サーバー契約にかかる初期費用及び、ドメイン取得の月額料金はお客様のご負担となります。</p>
+    </div>
+
+    <!-- web sites -->
+    <section class="work-section">
+        <p class="work-title">Web Site</p>
+        <div class="work-wrapper wow fadeIn">
+            <?php
+            $work = SCF::get('works', 18);
+            foreach ($work as $field_name => $field_value) {
+            ?>
+                <div class="work-content">
+                    <div class="work-content-image">
+                        <a href="<?php echo esc_html($field_value['works_link']); ?>" target="_blank" rel="noopener noreferrer">
+                            <?php
+                            if (wp_get_attachment_image_src($field_value['works_image'], 'large')) {
+                                echo wp_get_attachment_image($field_value['works_image'], 'large');
+                            } else {
+                                echo '<img src="' . esc_url(get_template_directory_uri()) . '/image/noimg.png" alt="No Image">';
+                            }
+                            ?>
+                        </a>
+                    </div>
+                    <div class="work-content-text">
+                        <p class="work-text"><?php echo esc_html($field_value['works_text']); ?></p>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+        </div>
     </section>
 
-    <section class="to_top to_top_fixed">
-        <div class="arrowWrapTop">
-            <a href="#" class="arrowInnerTop" id="to_top">
-                <div class="arrow_top"></div>
-                <p>TO TOP</p>
-            </a>
-        </div>
-    </section>
+    <div class="more-read">
+        <button onclick="location.href='https://shoheishimizu.com/contact'" class="more-read-button" type="button">無料でお見積り</button>
+    </div>
 
-    <?php get_footer(); ?>
+</section>
+
+<section class="to_top to_top_fixed">
+    <div class="arrowWrapTop">
+        <a href="#" class="arrowInnerTop" id="to_top">
+            <div class="arrow_top"></div>
+            <p>TO TOP</p>
+        </a>
+    </div>
+</section>
+
+<?php get_footer(); ?>
