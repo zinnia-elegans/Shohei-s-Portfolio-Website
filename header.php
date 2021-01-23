@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://shoheishimizu.com/" />
     <meta property="og:title" content="Shohei Shimizu" />
     <meta property="og:description" content="Shohei's Portfolio Website" />
-    <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/image/twitter_card.png" />
+    <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/image/twitter_card.jpg" />
 
     <?php wp_head(); ?>
 </head>

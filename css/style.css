@@ -36,7 +36,7 @@ body {
   overflow-x: hidden;
   overflow-wrap: break-word;
   background-color: #fbfbfb !important;
-  margin: 0;
+  margin: 0 !important;
   letter-spacing: 3px;
 }
 
@@ -467,10 +467,6 @@ button[type=button]:focus {
   .contact-link-button {
     font-size: 14px;
   }
-}
-
-.customize-support {
-  margin-top: 0 !important;
 }
 
 /*=====================================
@@ -2500,12 +2496,17 @@ textarea:focus::placeholder {
   outline: none;
 }
 
+div.wpcf7-mail-sent-ok {
+  display: none !important;
+}
+
 /*=====================================
 # complete.php
 =======================================*/
 .complete {
   text-align: center;
   padding: 30px;
+  margin: 100px auto;
 }
 
 .complete-title {

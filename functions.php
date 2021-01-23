@@ -98,3 +98,19 @@ function my_archive_title($title)
     return $title;
 };
 add_filter('get_the_archive_title', 'my_archive_title');
+
+/**
+ * フォーム送信後に、サンクスページに遷移
+ *
+ */
+add_action('wp_footer', 'add_origin_thanks_page');
+function add_origin_thanks_page()
+{
+    echo <<< EOC
+    <script>
+      document.addEventListener( 'wpcf7mailsent', function( event ) {
+        location = 'https://shoheishimizu.com/complete';
+      }, false );
+    </script>
+   EOC;
+}

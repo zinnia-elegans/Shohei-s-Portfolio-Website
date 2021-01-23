@@ -13,9 +13,9 @@ Template Name: Contact
         <p class="title-subtext">お問い合わせ</p>
     </div>
 
-    <form class="contact-form wow fadeIn">
-        <?php echo do_shortcode('[contact-form-7 id="159" title="プロ級フォームお問い合わせ"]'); ?>
-    </form>
+    <div class="contact-form wow fadeIn">
+        <?php echo do_shortcode('[contact-form-7 id="203" title="form"]'); ?>
+    </div>
 
 </section>
 

@@ -28,7 +28,7 @@ $(function () {
     // アニメーションさせたいクラス
     var container = $(".main-text");
     // アニメーションスピード
-    var speed = 80;
+    var speed = 200;
 
     // テキストの間にスペースを入れます
     var content = $(container).html();
@@ -54,7 +54,7 @@ $(function () {
 
 $(function () {
     var container = $(".main-subtext");
-    var speed = 100;
+    var speed = 200;
     var content = $(container).html();
     var text = $.trim(content);
     var newHtml = "";

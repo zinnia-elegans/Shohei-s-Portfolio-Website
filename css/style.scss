@@ -63,7 +63,7 @@ body {
     overflow-x: hidden;
     overflow-wrap: break-word;
     background-color: $color-white !important;
-    margin: 0;
+    margin: 0 !important;
     letter-spacing: 3px;
 }
 
@@ -463,9 +463,9 @@ button[type=button] {
     }
 }
 
-.customize-support {
-    margin-top: 0 !important;
-}
+// .customize-support {
+//     margin-top: 0 !important;
+// }
 
 /*=====================================
 # drawer_menu
@@ -2326,12 +2326,17 @@ textarea {
     outline: none;
 }
 
+div.wpcf7-mail-sent-ok {
+    display: none!important;
+}
+
 /*=====================================
 # complete.php
 =======================================*/
 .complete {
     text-align: center;
     padding: 30px;
+    margin: 100px auto;
 }
 
 .complete-title {
