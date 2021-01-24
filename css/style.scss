@@ -236,8 +236,9 @@ button[type=button] {
     margin:100px auto 0;
 
     &:hover {
-        opacity: 0.7;
-        transition: 1s;
+        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+        transform: translateY(-4px);
+        transition: 0.7s;
     }
 
 
@@ -391,6 +392,7 @@ button[type=button] {
     right: 0;
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .header-menu {
@@ -470,9 +472,14 @@ button[type=button] {
 /*=====================================
 # drawer_menu
 =======================================*/
+.custom-header {
+    width: 100%;
+    height: 100%;
+}
+
 #nav-toggle {
     position: fixed;
-    top: 43px;
+    top: 12px;
     right: 60px;
     height: 32px;
     cursor: pointer;
@@ -481,20 +488,11 @@ button[type=button] {
     height: 50px;
 
     @include mq(xl) {
-        top: 36px;
+        top: 5px;
     }
 
     @include mq(lg) {
-        top: 40px;
-        right: 10px;
-    }
-
-    @include mq(md) {
-        top: 50px;
-    }
-
-    @include mq(sm) {
-        // top: 70px;
+        right: 15px;
     }
 }
 
@@ -679,32 +677,57 @@ header #nav-toggle > div > span.toggle {
 }
 
 .main-text {
-    font-family: 'showtime',Century;
-    text-align: center;
-    font-size: 120px;
+    max-width: 800px;
     position: absolute;
-    top: 34%;
+    top: 40%;
     left: 32%;
     transform:translate(-50%,-50%);
-    color: $color-text;
-    letter-spacing: 12px;
-    font-weight:400;
 
     @include mq(xl) {
-        font-size: 90px;
+        max-width: 500px;
         left: 40%;
         top: 40%;
     }
-
-    @include mq(lg) {
-        font-size: 50px;
+    
+    @include mq(md) {
+        top: 50%;
     }
 
     @include mq(sm) {
-        top: 30%;
+        // top: 0%;
     }
-
 }
+
+
+
+// フォントの場合、ゆっくり左から表示 + JS
+// .main-text {
+//     font-family: 'showtime',Century;
+//     text-align: center;
+//     font-size: 120px;
+//     position: absolute;
+//     top: 34%;
+//     left: 32%;
+//     transform:translate(-50%,-50%);
+//     color: $color-text;
+//     letter-spacing: 12px;
+//     font-weight:400;
+
+//     @include mq(xl) {
+//         font-size: 90px;
+//         left: 40%;
+//         top: 40%;
+//     }
+
+//     @include mq(lg) {
+//         font-size: 50px;
+//     }
+
+//     @include mq(sm) {
+//         top: 30%;
+//     }
+
+// }
 
 .main-subtext {
     text-align: center;
@@ -2324,10 +2347,6 @@ textarea {
 
 :focus {
     outline: none;
-}
-
-div.wpcf7-mail-sent-ok {
-    display: none!important;
 }
 
 /*=====================================

@@ -23,7 +23,7 @@
     <header class="header header-inner" id="header">
         <nav class="header-nav dc-menu">
             <div class="header-menu">
-                <h1 class="header-link">Shohei's Portfolio Website</h1>
+                <h1 class="header-link"><a href="<?php echo esc_url(home_url('/')); ?>">Shohei's Portfolio Website</a></h1>
                 <div class="contact-link">
                     <button onclick="location.href='https://shoheishimizu.com/contact'" class="contact-link-button" type="button">Contact</button>
                 </div>

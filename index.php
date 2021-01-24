@@ -3,7 +3,9 @@
 <!-- main -->
 <section class="main main-inner">
     <div class="main-content wow fadeIn">
-        <h1 class="main-text fede">Shohei Shimizu</h1>
+        <div class="main-text wow fadeIn">
+            <img src="<?php echo get_template_directory_uri() ?>/image/Shohei Shimizu.png" alt="フォント画像">
+        </div>
         <p class="main-subtext fade">お客様の課題解決のため、価値あるサービスを</p>
     </div>
 </section>
@@ -80,58 +82,70 @@
     </div>
     <div class="business-wrapper wow fadeIn">
 
-        <a href="https://shoheishimizu.com/service/ec-site" class="business-content">
-            <p class="business-content-title">ECサイト構築</p>
-            <?php
-            $ec_site = SCF::get('ec_site', 115);
-            foreach ($ec_site as $field_name => $field_value) {
-            ?>
-                <ul class="business-content-list">
-                    <li class="business-content-text"><?php echo esc_html($field_value['ec_site_text']); ?></li>
-                </ul>
-            <?php } ?>
-            <p class="business-price"><span class="business-price-size">10,000</span>円〜</p>
-        </a>
+        <!-- Price - ec_site -->
+        <div class="business-content">
+            <a href="https://shoheishimizu.com/service/ec-site">
+                <p class="business-content-title">ECサイト構築</p>
+                <?php
+                $ec_site = SCF::get('ec_site', 115);
+                foreach ($ec_site as $field_name => $field_value) {
+                ?>
+                    <ul class="business-content-list">
+                        <li class="business-content-text"><?php echo esc_html($field_value['ec_site_text']); ?></li>
+                    </ul>
+                <?php } ?>
+                <p class="business-price"><span class="business-price-size">10,000</span>円〜</p>
+            </a>
+        </div>
 
-        <a href="https://shoheishimizu.com/service/business-animation/" class="business-content">
-            <p class="business-content-title">ビジネスアニメーション</p>
-            <?php
-            $business_animation = SCF::get('business_animation', 122);
-            foreach ($business_animation as $field_name => $field_value) {
-            ?>
-                <ul class="business-content-list">
-                    <li class="business-content-text"><?php echo esc_html($field_value['business_animation_text']); ?></li>
-                </ul>
-            <?php } ?>
-            <p class="business-price">30秒 / <span class="business-price-size">30,000</span>円〜</p>
-        </a>
+        <!-- Price - animation -->
+        <div class="business-content">
+            <a href="https://shoheishimizu.com/service/business-animation/">
+                <p class="business-content-title">ビジネスアニメーション</p>
+                <?php
+                $business_animation = SCF::get('business_animation', 122);
+                foreach ($business_animation as $field_name => $field_value) {
+                ?>
+                    <ul class="business-content-list">
+                        <li class="business-content-text"><?php echo esc_html($field_value['business_animation_text']); ?></li>
+                    </ul>
+                <?php } ?>
+                <p class="business-price">30秒 / <span class="business-price-size">30,000</span>円〜</p>
+            </a>
+        </div>
 
-        <a href="https://shoheishimizu.com/service/web-site" class="business-content">
-            <p class="business-content-title">Webデザイン</p>
-            <?php
-            $web_design = SCF::get('web_design', 125);
-            foreach ($web_design as $field_name => $field_value) {
-            ?>
-                <ul class="business-content-list">
-                    <li class="business-content-text"><?php echo esc_html($field_value['web_design_text']); ?></li>
-                </ul>
-            <?php } ?>
-            <p class="business-price">1ページ / <span class="business-price-size">20,000</span>円〜</p>
-        </a>
+        <!-- Price - web_design -->
+        <div class="business-content">
+            <a href="https://shoheishimizu.com/service/web-site">
+                <p class="business-content-title">Webデザイン</p>
+                <?php
+                $web_design = SCF::get('web_design', 125);
+                foreach ($web_design as $field_name => $field_value) {
+                ?>
+                    <ul class="business-content-list">
+                        <li class="business-content-text"><?php echo esc_html($field_value['web_design_text']); ?></li>
+                    </ul>
+                <?php } ?>
+                <p class="business-price">1ページ / <span class="business-price-size">20,000</span>円〜</p>
+            </a>
+        </div>
 
-        <a href="https://shoheishimizu.com/service/web-site" class="business-content">
-            <p class="business-content-title">Webサイト</p>
-            <?php
-            $web_site = SCF::get('web_site', 128);
-            foreach ($web_site as $field_name => $field_value) {
-            ?>
-                <ul class="business-content-list">
-                    <li class="business-content-text"><?php echo esc_html($field_value['web_site_text']); ?></li>
-                </ul>
-            <?php } ?>
-            <p class="business-sub-price">LP / <span class="business-price-size">30,000</span>円〜</p>
-            <p class="business-price">HP / <span class="business-price-size">50,000</span>円〜</p>
-        </a>
+        <!-- Price - web_site -->
+        <div class="business-content">
+            <a href="https://shoheishimizu.com/service/web-site">
+                <p class="business-content-title">Webサイト</p>
+                <?php
+                $web_site = SCF::get('web_site', 128);
+                foreach ($web_site as $field_name => $field_value) {
+                ?>
+                    <ul class="business-content-list">
+                        <li class="business-content-text"><?php echo esc_html($field_value['web_site_text']); ?></li>
+                    </ul>
+                <?php } ?>
+                <p class="business-sub-price">LP / <span class="business-price-size">30,000</span>円〜</p>
+                <p class="business-price">HP / <span class="business-price-size">50,000</span>円〜</p>
+            </a>
+        </div>
 
 
 
